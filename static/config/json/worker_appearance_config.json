@@ -1,0 +1,3472 @@
+{
+    "21505": {
+        "id": "21505",
+        "appearance_id": "22402",
+        "appearance": "worker_icon_2402"
+    },
+    "21506": {
+        "id": "21506",
+        "appearance_id": "22407",
+        "appearance": "worker_icon_2407"
+    },
+    "21507": {
+        "id": "21507",
+        "appearance_id": "21304",
+        "appearance": "worker_icon_1304"
+    },
+    "21508": {
+        "id": "21508",
+        "appearance_id": "21104",
+        "appearance": "worker_icon_1104"
+    },
+    "51207": {
+        "id": "51207",
+        "appearance_id": "22208",
+        "appearance": "worker_icon_2208"
+    },
+    "51208": {
+        "id": "51208",
+        "appearance_id": "22506",
+        "appearance": "worker_icon_2506"
+    },
+    "51209": {
+        "id": "51209",
+        "appearance_id": "21402",
+        "appearance": "worker_icon_1402"
+    },
+    "51210": {
+        "id": "51210",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "51211": {
+        "id": "51211",
+        "appearance_id": "22104",
+        "appearance": "worker_icon_2104"
+    },
+    "51212": {
+        "id": "51212",
+        "appearance_id": "22506",
+        "appearance": "worker_icon_2506"
+    },
+    "51213": {
+        "id": "51213",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "51214": {
+        "id": "51214",
+        "appearance_id": "21402",
+        "appearance": "worker_icon_1402"
+    },
+    "51215": {
+        "id": "51215",
+        "appearance_id": "22103",
+        "appearance": "worker_icon_2103"
+    },
+    "51216": {
+        "id": "51216",
+        "appearance_id": "22104",
+        "appearance": "worker_icon_2104"
+    },
+    "51217": {
+        "id": "51217",
+        "appearance_id": "21402",
+        "appearance": "worker_icon_1402"
+    },
+    "51218": {
+        "id": "51218",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "51219": {
+        "id": "51219",
+        "appearance_id": "22104",
+        "appearance": "worker_icon_2104"
+    },
+    "51220": {
+        "id": "51220",
+        "appearance_id": "22107",
+        "appearance": "worker_icon_2107"
+    },
+    "51221": {
+        "id": "51221",
+        "appearance_id": "21506",
+        "appearance": "worker_icon_1506"
+    },
+    "51222": {
+        "id": "51222",
+        "appearance_id": "21507",
+        "appearance": "worker_icon_1507"
+    },
+    "42007": {
+        "id": "42007",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "42008": {
+        "id": "42008",
+        "appearance_id": "21507",
+        "appearance": "worker_icon_1507"
+    },
+    "20505": {
+        "id": "20505",
+        "appearance_id": "22304",
+        "appearance": "worker_icon_2304"
+    },
+    "20506": {
+        "id": "20506",
+        "appearance_id": "22305",
+        "appearance": "worker_icon_2305"
+    },
+    "20507": {
+        "id": "20507",
+        "appearance_id": "21103",
+        "appearance": "worker_icon_1103"
+    },
+    "20508": {
+        "id": "20508",
+        "appearance_id": "21106",
+        "appearance": "worker_icon_1106"
+    },
+    "50207": {
+        "id": "50207",
+        "appearance_id": "22101",
+        "appearance": "worker_icon_2101"
+    },
+    "50208": {
+        "id": "50208",
+        "appearance_id": "22206",
+        "appearance": "worker_icon_2206"
+    },
+    "50209": {
+        "id": "50209",
+        "appearance_id": "21203",
+        "appearance": "worker_icon_1203"
+    },
+    "50210": {
+        "id": "50210",
+        "appearance_id": "21204",
+        "appearance": "worker_icon_1204"
+    },
+    "11301": {
+        "id": "11301",
+        "appearance_id": "22208",
+        "appearance": "worker_icon_2208"
+    },
+    "11302": {
+        "id": "11302",
+        "appearance_id": "22506",
+        "appearance": "worker_icon_2506"
+    },
+    "11303": {
+        "id": "11303",
+        "appearance_id": "21507",
+        "appearance": "worker_icon_1507"
+    },
+    "11304": {
+        "id": "11304",
+        "appearance_id": "21507",
+        "appearance": "worker_icon_1507"
+    },
+    "32809": {
+        "id": "32809",
+        "appearance_id": "22105",
+        "appearance": "worker_icon_2105"
+    },
+    "32810": {
+        "id": "32810",
+        "appearance_id": "22105",
+        "appearance": "worker_icon_2105"
+    },
+    "41003": {
+        "id": "41003",
+        "appearance_id": "22506",
+        "appearance": "worker_icon_2506"
+    },
+    "41004": {
+        "id": "41004",
+        "appearance_id": "22208",
+        "appearance": "worker_icon_2208"
+    },
+    "41005": {
+        "id": "41005",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "41006": {
+        "id": "41006",
+        "appearance_id": "21402",
+        "appearance": "worker_icon_1402"
+    },
+    "31801": {
+        "id": "31801",
+        "appearance_id": "22103",
+        "appearance": "worker_icon_2103"
+    },
+    "31802": {
+        "id": "31802",
+        "appearance_id": "22103",
+        "appearance": "worker_icon_2103"
+    },
+    "31803": {
+        "id": "31803",
+        "appearance_id": "21507",
+        "appearance": "worker_icon_1507"
+    },
+    "31804": {
+        "id": "31804",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "10301": {
+        "id": "10301",
+        "appearance_id": "22204",
+        "appearance": "worker_icon_2204"
+    },
+    "10302": {
+        "id": "10302",
+        "appearance_id": "22204",
+        "appearance": "worker_icon_2204"
+    },
+    "10303": {
+        "id": "10303",
+        "appearance_id": "21103",
+        "appearance": "worker_icon_1103"
+    },
+    "10304": {
+        "id": "10304",
+        "appearance_id": "21103",
+        "appearance": "worker_icon_1103"
+    },
+    "52301": {
+        "id": "52301",
+        "appearance_id": "21506",
+        "appearance": "worker_icon_1506"
+    },
+    "52302": {
+        "id": "52302",
+        "appearance_id": "21507",
+        "appearance": "worker_icon_1507"
+    },
+    "22607": {
+        "id": "22607",
+        "appearance_id": "21302",
+        "appearance": "worker_icon_1302"
+    },
+    "22608": {
+        "id": "22608",
+        "appearance_id": "21404",
+        "appearance": "worker_icon_1404"
+    },
+    "30801": {
+        "id": "30801",
+        "appearance_id": "21506",
+        "appearance": "worker_icon_1506"
+    },
+    "30802": {
+        "id": "30802",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "52309": {
+        "id": "52309",
+        "appearance_id": "22104",
+        "appearance": "worker_icon_2104"
+    },
+    "52310": {
+        "id": "52310",
+        "appearance_id": "22104",
+        "appearance": "worker_icon_2104"
+    },
+    "13401": {
+        "id": "13401",
+        "appearance_id": "22408",
+        "appearance": "worker_icon_2408"
+    },
+    "13402": {
+        "id": "13402",
+        "appearance_id": "22504",
+        "appearance": "worker_icon_2504"
+    },
+    "13403": {
+        "id": "13403",
+        "appearance_id": "21503",
+        "appearance": "worker_icon_1503"
+    },
+    "13404": {
+        "id": "13404",
+        "appearance_id": "21102",
+        "appearance": "worker_icon_1102"
+    },
+    "43103": {
+        "id": "43103",
+        "appearance_id": "22202",
+        "appearance": "worker_icon_2202"
+    },
+    "43104": {
+        "id": "43104",
+        "appearance_id": "22203",
+        "appearance": "worker_icon_2203"
+    },
+    "43105": {
+        "id": "43105",
+        "appearance_id": "21405",
+        "appearance": "worker_icon_1405"
+    },
+    "43106": {
+        "id": "43106",
+        "appearance_id": "21505",
+        "appearance": "worker_icon_1505"
+    },
+    "21605": {
+        "id": "21605",
+        "appearance_id": "22207",
+        "appearance": "worker_icon_2207"
+    },
+    "21606": {
+        "id": "21606",
+        "appearance_id": "22106",
+        "appearance": "worker_icon_2106"
+    },
+    "21607": {
+        "id": "21607",
+        "appearance_id": "21503",
+        "appearance": "worker_icon_1503"
+    },
+    "21608": {
+        "id": "21608",
+        "appearance_id": "21502",
+        "appearance": "worker_icon_1502"
+    },
+    "51307": {
+        "id": "51307",
+        "appearance_id": "22208",
+        "appearance": "worker_icon_2208"
+    },
+    "51308": {
+        "id": "51308",
+        "appearance_id": "22107",
+        "appearance": "worker_icon_2107"
+    },
+    "51309": {
+        "id": "51309",
+        "appearance_id": "21402",
+        "appearance": "worker_icon_1402"
+    },
+    "51310": {
+        "id": "51310",
+        "appearance_id": "21402",
+        "appearance": "worker_icon_1402"
+    },
+    "51311": {
+        "id": "51311",
+        "appearance_id": "22403",
+        "appearance": "worker_icon_2403"
+    },
+    "51312": {
+        "id": "51312",
+        "appearance_id": "22201",
+        "appearance": "worker_icon_2201"
+    },
+    "51313": {
+        "id": "51313",
+        "appearance_id": "21501",
+        "appearance": "worker_icon_1501"
+    },
+    "51314": {
+        "id": "51314",
+        "appearance_id": "21306",
+        "appearance": "worker_icon_1306"
+    },
+    "51315": {
+        "id": "51315",
+        "appearance_id": "22403",
+        "appearance": "worker_icon_2403"
+    },
+    "51316": {
+        "id": "51316",
+        "appearance_id": "22201",
+        "appearance": "worker_icon_2201"
+    },
+    "51317": {
+        "id": "51317",
+        "appearance_id": "21501",
+        "appearance": "worker_icon_1501"
+    },
+    "51318": {
+        "id": "51318",
+        "appearance_id": "21306",
+        "appearance": "worker_icon_1306"
+    },
+    "51319": {
+        "id": "51319",
+        "appearance_id": "22208",
+        "appearance": "worker_icon_2208"
+    },
+    "51320": {
+        "id": "51320",
+        "appearance_id": "22107",
+        "appearance": "worker_icon_2107"
+    },
+    "42105": {
+        "id": "42105",
+        "appearance_id": "22103",
+        "appearance": "worker_icon_2103"
+    },
+    "42106": {
+        "id": "42106",
+        "appearance_id": "22104",
+        "appearance": "worker_icon_2104"
+    },
+    "42107": {
+        "id": "42107",
+        "appearance_id": "21506",
+        "appearance": "worker_icon_1506"
+    },
+    "42108": {
+        "id": "42108",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "20605": {
+        "id": "20605",
+        "appearance_id": "22507",
+        "appearance": "worker_icon_2507"
+    },
+    "20606": {
+        "id": "20606",
+        "appearance_id": "22301",
+        "appearance": "worker_icon_2301"
+    },
+    "20607": {
+        "id": "20607",
+        "appearance_id": "21502",
+        "appearance": "worker_icon_1502"
+    },
+    "20608": {
+        "id": "20608",
+        "appearance_id": "21403",
+        "appearance": "worker_icon_1403"
+    },
+    "50307": {
+        "id": "50307",
+        "appearance_id": "22304",
+        "appearance": "worker_icon_2304"
+    },
+    "50308": {
+        "id": "50308",
+        "appearance_id": "22305",
+        "appearance": "worker_icon_2305"
+    },
+    "50309": {
+        "id": "50309",
+        "appearance_id": "21106",
+        "appearance": "worker_icon_1106"
+    },
+    "50310": {
+        "id": "50310",
+        "appearance_id": "21106",
+        "appearance": "worker_icon_1106"
+    },
+    "50311": {
+        "id": "50311",
+        "appearance_id": "22304",
+        "appearance": "worker_icon_2304"
+    },
+    "50312": {
+        "id": "50312",
+        "appearance_id": "22303",
+        "appearance": "worker_icon_2303"
+    },
+    "50313": {
+        "id": "50313",
+        "appearance_id": "21106",
+        "appearance": "worker_icon_1106"
+    },
+    "50314": {
+        "id": "50314",
+        "appearance_id": "21307",
+        "appearance": "worker_icon_1307"
+    },
+    "50315": {
+        "id": "50315",
+        "appearance_id": "22304",
+        "appearance": "worker_icon_2304"
+    },
+    "50316": {
+        "id": "50316",
+        "appearance_id": "22204",
+        "appearance": "worker_icon_2204"
+    },
+    "50317": {
+        "id": "50317",
+        "appearance_id": "21106",
+        "appearance": "worker_icon_1106"
+    },
+    "50318": {
+        "id": "50318",
+        "appearance_id": "21307",
+        "appearance": "worker_icon_1307"
+    },
+    "41103": {
+        "id": "41103",
+        "appearance_id": "22208",
+        "appearance": "worker_icon_2208"
+    },
+    "41104": {
+        "id": "41104",
+        "appearance_id": "22103",
+        "appearance": "worker_icon_2103"
+    },
+    "41105": {
+        "id": "41105",
+        "appearance_id": "21402",
+        "appearance": "worker_icon_1402"
+    },
+    "41106": {
+        "id": "41106",
+        "appearance_id": "21402",
+        "appearance": "worker_icon_1402"
+    },
+    "50323": {
+        "id": "50323",
+        "appearance_id": "22204",
+        "appearance": "worker_icon_2204"
+    },
+    "50324": {
+        "id": "50324",
+        "appearance_id": "22102",
+        "appearance": "worker_icon_2102"
+    },
+    "50325": {
+        "id": "50325",
+        "appearance_id": "21307",
+        "appearance": "worker_icon_1307"
+    },
+    "50326": {
+        "id": "50326",
+        "appearance_id": "21103",
+        "appearance": "worker_icon_1103"
+    },
+    "31901": {
+        "id": "31901",
+        "appearance_id": "22506",
+        "appearance": "worker_icon_2506"
+    },
+    "31902": {
+        "id": "31902",
+        "appearance_id": "22506",
+        "appearance": "worker_icon_2506"
+    },
+    "31903": {
+        "id": "31903",
+        "appearance_id": "21402",
+        "appearance": "worker_icon_1402"
+    },
+    "31904": {
+        "id": "31904",
+        "appearance_id": "21507",
+        "appearance": "worker_icon_1507"
+    },
+    "10401": {
+        "id": "10401",
+        "appearance_id": "22404",
+        "appearance": "worker_icon_2404"
+    },
+    "10402": {
+        "id": "10402",
+        "appearance_id": "22206",
+        "appearance": "worker_icon_2206"
+    },
+    "10403": {
+        "id": "10403",
+        "appearance_id": "21204",
+        "appearance": "worker_icon_1204"
+    },
+    "10404": {
+        "id": "10404",
+        "appearance_id": "21205",
+        "appearance": "worker_icon_1205"
+    },
+    "53413": {
+        "id": "53413",
+        "appearance_id": "21404",
+        "appearance": "worker_icon_1404"
+    },
+    "53414": {
+        "id": "53414",
+        "appearance_id": "21102",
+        "appearance": "worker_icon_1102"
+    },
+    "40103": {
+        "id": "40103",
+        "appearance_id": "22404",
+        "appearance": "worker_icon_2404"
+    },
+    "40104": {
+        "id": "40104",
+        "appearance_id": "22101",
+        "appearance": "worker_icon_2101"
+    },
+    "40105": {
+        "id": "40105",
+        "appearance_id": "21203",
+        "appearance": "worker_icon_1203"
+    },
+    "40106": {
+        "id": "40106",
+        "appearance_id": "21204",
+        "appearance": "worker_icon_1204"
+    },
+    "53419": {
+        "id": "53419",
+        "appearance_id": "22106",
+        "appearance": "worker_icon_2106"
+    },
+    "53420": {
+        "id": "53420",
+        "appearance_id": "22504",
+        "appearance": "worker_icon_2504"
+    },
+    "53421": {
+        "id": "53421",
+        "appearance_id": "22405",
+        "appearance": "worker_icon_2405"
+    },
+    "53422": {
+        "id": "53422",
+        "appearance_id": "22504",
+        "appearance": "worker_icon_2504"
+    },
+    "52401": {
+        "id": "52401",
+        "appearance_id": "21506",
+        "appearance": "worker_icon_1506"
+    },
+    "52402": {
+        "id": "52402",
+        "appearance_id": "21402",
+        "appearance": "worker_icon_1402"
+    },
+    "30901": {
+        "id": "30901",
+        "appearance_id": "21507",
+        "appearance": "worker_icon_1507"
+    },
+    "30902": {
+        "id": "30902",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "52409": {
+        "id": "52409",
+        "appearance_id": "22208",
+        "appearance": "worker_icon_2208"
+    },
+    "52410": {
+        "id": "52410",
+        "appearance_id": "22506",
+        "appearance": "worker_icon_2506"
+    },
+    "13501": {
+        "id": "13501",
+        "appearance_id": "21405",
+        "appearance": "worker_icon_1405"
+    },
+    "30910": {
+        "id": "30910",
+        "appearance_id": "22104",
+        "appearance": "worker_icon_2104"
+    },
+    "43203": {
+        "id": "43203",
+        "appearance_id": "22207",
+        "appearance": "worker_icon_2207"
+    },
+    "43204": {
+        "id": "43204",
+        "appearance_id": "22306",
+        "appearance": "worker_icon_2306"
+    },
+    "43205": {
+        "id": "43205",
+        "appearance_id": "21404",
+        "appearance": "worker_icon_1404"
+    },
+    "43206": {
+        "id": "43206",
+        "appearance_id": "21104",
+        "appearance": "worker_icon_1104"
+    },
+    "51407": {
+        "id": "51407",
+        "appearance_id": "22403",
+        "appearance": "worker_icon_2403"
+    },
+    "51408": {
+        "id": "51408",
+        "appearance_id": "22201",
+        "appearance": "worker_icon_2201"
+    },
+    "51409": {
+        "id": "51409",
+        "appearance_id": "21501",
+        "appearance": "worker_icon_1501"
+    },
+    "51410": {
+        "id": "51410",
+        "appearance_id": "21306",
+        "appearance": "worker_icon_1306"
+    },
+    "42205": {
+        "id": "42205",
+        "appearance_id": "22208",
+        "appearance": "worker_icon_2208"
+    },
+    "42206": {
+        "id": "42206",
+        "appearance_id": "22104",
+        "appearance": "worker_icon_2104"
+    },
+    "42207": {
+        "id": "42207",
+        "appearance_id": "21402",
+        "appearance": "worker_icon_1402"
+    },
+    "42208": {
+        "id": "42208",
+        "appearance_id": "21402",
+        "appearance": "worker_icon_1402"
+    },
+    "50407": {
+        "id": "50407",
+        "appearance_id": "22205",
+        "appearance": "worker_icon_2205"
+    },
+    "50408": {
+        "id": "50408",
+        "appearance_id": "22307",
+        "appearance": "worker_icon_2307"
+    },
+    "33001": {
+        "id": "33001",
+        "appearance_id": "21305",
+        "appearance": "worker_icon_1305"
+    },
+    "33002": {
+        "id": "33002",
+        "appearance_id": "21403",
+        "appearance": "worker_icon_1403"
+    },
+    "11501": {
+        "id": "11501",
+        "appearance_id": "22502",
+        "appearance": "worker_icon_2502"
+    },
+    "11502": {
+        "id": "11502",
+        "appearance_id": "22306",
+        "appearance": "worker_icon_2306"
+    },
+    "11503": {
+        "id": "11503",
+        "appearance_id": "21503",
+        "appearance": "worker_icon_1503"
+    },
+    "11504": {
+        "id": "11504",
+        "appearance_id": "21302",
+        "appearance": "worker_icon_1302"
+    },
+    "33009": {
+        "id": "33009",
+        "appearance_id": "22106",
+        "appearance": "worker_icon_2106"
+    },
+    "33010": {
+        "id": "33010",
+        "appearance_id": "22405",
+        "appearance": "worker_icon_2405"
+    },
+    "41203": {
+        "id": "41203",
+        "appearance_id": "22208",
+        "appearance": "worker_icon_2208"
+    },
+    "41204": {
+        "id": "41204",
+        "appearance_id": "22208",
+        "appearance": "worker_icon_2208"
+    },
+    "41205": {
+        "id": "41205",
+        "appearance_id": "21507",
+        "appearance": "worker_icon_1507"
+    },
+    "41206": {
+        "id": "41206",
+        "appearance_id": "21506",
+        "appearance": "worker_icon_1506"
+    },
+    "32001": {
+        "id": "32001",
+        "appearance_id": "22103",
+        "appearance": "worker_icon_2103"
+    },
+    "32002": {
+        "id": "32002",
+        "appearance_id": "22506",
+        "appearance": "worker_icon_2506"
+    },
+    "32003": {
+        "id": "32003",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "32004": {
+        "id": "32004",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "10501": {
+        "id": "10501",
+        "appearance_id": "22303",
+        "appearance": "worker_icon_2303"
+    },
+    "10502": {
+        "id": "10502",
+        "appearance_id": "22303",
+        "appearance": "worker_icon_2303"
+    },
+    "10503": {
+        "id": "10503",
+        "appearance_id": "21307",
+        "appearance": "worker_icon_1307"
+    },
+    "10504": {
+        "id": "10504",
+        "appearance_id": "21103",
+        "appearance": "worker_icon_1103"
+    },
+    "40203": {
+        "id": "40203",
+        "appearance_id": "22205",
+        "appearance": "worker_icon_2205"
+    },
+    "40204": {
+        "id": "40204",
+        "appearance_id": "22205",
+        "appearance": "worker_icon_2205"
+    },
+    "40205": {
+        "id": "40205",
+        "appearance_id": "21205",
+        "appearance": "worker_icon_1205"
+    },
+    "40206": {
+        "id": "40206",
+        "appearance_id": "21205",
+        "appearance": "worker_icon_1205"
+    },
+    "52501": {
+        "id": "52501",
+        "appearance_id": "21507",
+        "appearance": "worker_icon_1507"
+    },
+    "52502": {
+        "id": "52502",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "22807": {
+        "id": "22807",
+        "appearance_id": "21505",
+        "appearance": "worker_icon_1505"
+    },
+    "22808": {
+        "id": "22808",
+        "appearance_id": "21202",
+        "appearance": "worker_icon_1202"
+    },
+    "31001": {
+        "id": "31001",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "31002": {
+        "id": "31002",
+        "appearance_id": "21507",
+        "appearance": "worker_icon_1507"
+    },
+    "52509": {
+        "id": "52509",
+        "appearance_id": "22506",
+        "appearance": "worker_icon_2506"
+    },
+    "52510": {
+        "id": "52510",
+        "appearance_id": "22506",
+        "appearance": "worker_icon_2506"
+    },
+    "31009": {
+        "id": "31009",
+        "appearance_id": "22103",
+        "appearance": "worker_icon_2103"
+    },
+    "31010": {
+        "id": "31010",
+        "appearance_id": "22107",
+        "appearance": "worker_icon_2107"
+    },
+    "51507": {
+        "id": "51507",
+        "appearance_id": "22502",
+        "appearance": "worker_icon_2502"
+    },
+    "51508": {
+        "id": "51508",
+        "appearance_id": "22505",
+        "appearance": "worker_icon_2505"
+    },
+    "51509": {
+        "id": "51509",
+        "appearance_id": "21104",
+        "appearance": "worker_icon_1104"
+    },
+    "51510": {
+        "id": "51510",
+        "appearance_id": "21302",
+        "appearance": "worker_icon_1302"
+    },
+    "12601": {
+        "id": "12601",
+        "appearance_id": "22405",
+        "appearance": "worker_icon_2405"
+    },
+    "12602": {
+        "id": "12602",
+        "appearance_id": "22403",
+        "appearance": "worker_icon_2403"
+    },
+    "12603": {
+        "id": "12603",
+        "appearance_id": "21306",
+        "appearance": "worker_icon_1306"
+    },
+    "12604": {
+        "id": "12604",
+        "appearance_id": "21101",
+        "appearance": "worker_icon_1101"
+    },
+    "42305": {
+        "id": "42305",
+        "appearance_id": "22103",
+        "appearance": "worker_icon_2103"
+    },
+    "42306": {
+        "id": "42306",
+        "appearance_id": "22506",
+        "appearance": "worker_icon_2506"
+    },
+    "42307": {
+        "id": "42307",
+        "appearance_id": "21402",
+        "appearance": "worker_icon_1402"
+    },
+    "42308": {
+        "id": "42308",
+        "appearance_id": "21402",
+        "appearance": "worker_icon_1402"
+    },
+    "20805": {
+        "id": "20805",
+        "appearance_id": "22104",
+        "appearance": "worker_icon_2104"
+    },
+    "20806": {
+        "id": "20806",
+        "appearance_id": "22107",
+        "appearance": "worker_icon_2107"
+    },
+    "20807": {
+        "id": "20807",
+        "appearance_id": "21506",
+        "appearance": "worker_icon_1506"
+    },
+    "20808": {
+        "id": "20808",
+        "appearance_id": "21506",
+        "appearance": "worker_icon_1506"
+    },
+    "50507": {
+        "id": "50507",
+        "appearance_id": "22305",
+        "appearance": "worker_icon_2305"
+    },
+    "50508": {
+        "id": "50508",
+        "appearance_id": "22102",
+        "appearance": "worker_icon_2102"
+    },
+    "33101": {
+        "id": "33101",
+        "appearance_id": "21505",
+        "appearance": "worker_icon_1505"
+    },
+    "33102": {
+        "id": "33102",
+        "appearance_id": "21405",
+        "appearance": "worker_icon_1405"
+    },
+    "50511": {
+        "id": "50511",
+        "appearance_id": "22102",
+        "appearance": "worker_icon_2102"
+    },
+    "50512": {
+        "id": "50512",
+        "appearance_id": "22305",
+        "appearance": "worker_icon_2305"
+    },
+    "11601": {
+        "id": "11601",
+        "appearance_id": "22508",
+        "appearance": "worker_icon_2508"
+    },
+    "11602": {
+        "id": "11602",
+        "appearance_id": "22207",
+        "appearance": "worker_icon_2207"
+    },
+    "11603": {
+        "id": "11603",
+        "appearance_id": "21303",
+        "appearance": "worker_icon_1303"
+    },
+    "11604": {
+        "id": "11604",
+        "appearance_id": "21302",
+        "appearance": "worker_icon_1302"
+    },
+    "33109": {
+        "id": "33109",
+        "appearance_id": "22202",
+        "appearance": "worker_icon_2202"
+    },
+    "33110": {
+        "id": "33110",
+        "appearance_id": "22105",
+        "appearance": "worker_icon_2105"
+    },
+    "50519": {
+        "id": "50519",
+        "appearance_id": "22204",
+        "appearance": "worker_icon_2204"
+    },
+    "50520": {
+        "id": "50520",
+        "appearance_id": "22303",
+        "appearance": "worker_icon_2303"
+    },
+    "50521": {
+        "id": "50521",
+        "appearance_id": "21106",
+        "appearance": "worker_icon_1106"
+    },
+    "50522": {
+        "id": "50522",
+        "appearance_id": "21103",
+        "appearance": "worker_icon_1103"
+    },
+    "50523": {
+        "id": "50523",
+        "appearance_id": "22204",
+        "appearance": "worker_icon_2204"
+    },
+    "50524": {
+        "id": "50524",
+        "appearance_id": "22303",
+        "appearance": "worker_icon_2303"
+    },
+    "50525": {
+        "id": "50525",
+        "appearance_id": "21103",
+        "appearance": "worker_icon_1103"
+    },
+    "50526": {
+        "id": "50526",
+        "appearance_id": "21106",
+        "appearance": "worker_icon_1106"
+    },
+    "32101": {
+        "id": "32101",
+        "appearance_id": "22107",
+        "appearance": "worker_icon_2107"
+    },
+    "32102": {
+        "id": "32102",
+        "appearance_id": "22208",
+        "appearance": "worker_icon_2208"
+    },
+    "32103": {
+        "id": "32103",
+        "appearance_id": "21507",
+        "appearance": "worker_icon_1507"
+    },
+    "32104": {
+        "id": "32104",
+        "appearance_id": "21507",
+        "appearance": "worker_icon_1507"
+    },
+    "10601": {
+        "id": "10601",
+        "appearance_id": "22507",
+        "appearance": "worker_icon_2507"
+    },
+    "10602": {
+        "id": "10602",
+        "appearance_id": "22502",
+        "appearance": "worker_icon_2502"
+    },
+    "10603": {
+        "id": "10603",
+        "appearance_id": "21401",
+        "appearance": "worker_icon_1401"
+    },
+    "10604": {
+        "id": "10604",
+        "appearance_id": "21301",
+        "appearance": "worker_icon_1301"
+    },
+    "40303": {
+        "id": "40303",
+        "appearance_id": "22204",
+        "appearance": "worker_icon_2204"
+    },
+    "40304": {
+        "id": "40304",
+        "appearance_id": "22304",
+        "appearance": "worker_icon_2304"
+    },
+    "40305": {
+        "id": "40305",
+        "appearance_id": "21103",
+        "appearance": "worker_icon_1103"
+    },
+    "40306": {
+        "id": "40306",
+        "appearance_id": "21103",
+        "appearance": "worker_icon_1103"
+    },
+    "22905": {
+        "id": "22905",
+        "appearance_id": "22105",
+        "appearance": "worker_icon_2105"
+    },
+    "22906": {
+        "id": "22906",
+        "appearance_id": "22105",
+        "appearance": "worker_icon_2105"
+    },
+    "22907": {
+        "id": "22907",
+        "appearance_id": "21405",
+        "appearance": "worker_icon_1405"
+    },
+    "22908": {
+        "id": "22908",
+        "appearance_id": "21406",
+        "appearance": "worker_icon_1406"
+    },
+    "31101": {
+        "id": "31101",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "31102": {
+        "id": "31102",
+        "appearance_id": "21402",
+        "appearance": "worker_icon_1402"
+    },
+    "52607": {
+        "id": "52607",
+        "appearance_id": "22406",
+        "appearance": "worker_icon_2406"
+    },
+    "52608": {
+        "id": "52608",
+        "appearance_id": "22405",
+        "appearance": "worker_icon_2405"
+    },
+    "52609": {
+        "id": "52609",
+        "appearance_id": "21101",
+        "appearance": "worker_icon_1101"
+    },
+    "52610": {
+        "id": "52610",
+        "appearance_id": "21201",
+        "appearance": "worker_icon_1201"
+    },
+    "52611": {
+        "id": "52611",
+        "appearance_id": "22306",
+        "appearance": "worker_icon_2306"
+    },
+    "52612": {
+        "id": "52612",
+        "appearance_id": "22507",
+        "appearance": "worker_icon_2507"
+    },
+    "31109": {
+        "id": "31109",
+        "appearance_id": "22104",
+        "appearance": "worker_icon_2104"
+    },
+    "31110": {
+        "id": "31110",
+        "appearance_id": "22107",
+        "appearance": "worker_icon_2107"
+    },
+    "43403": {
+        "id": "43403",
+        "appearance_id": "22106",
+        "appearance": "worker_icon_2106"
+    },
+    "43404": {
+        "id": "43404",
+        "appearance_id": "22405",
+        "appearance": "worker_icon_2405"
+    },
+    "43405": {
+        "id": "43405",
+        "appearance_id": "21102",
+        "appearance": "worker_icon_1102"
+    },
+    "43406": {
+        "id": "43406",
+        "appearance_id": "21305",
+        "appearance": "worker_icon_1305"
+    },
+    "30101": {
+        "id": "30101",
+        "appearance_id": "21203",
+        "appearance": "worker_icon_1203"
+    },
+    "30102": {
+        "id": "30102",
+        "appearance_id": "21204",
+        "appearance": "worker_icon_1204"
+    },
+    "51607": {
+        "id": "51607",
+        "appearance_id": "22503",
+        "appearance": "worker_icon_2503"
+    },
+    "51608": {
+        "id": "51608",
+        "appearance_id": "22302",
+        "appearance": "worker_icon_2302"
+    },
+    "51609": {
+        "id": "51609",
+        "appearance_id": "21302",
+        "appearance": "worker_icon_1302"
+    },
+    "51610": {
+        "id": "51610",
+        "appearance_id": "21302",
+        "appearance": "worker_icon_1302"
+    },
+    "30109": {
+        "id": "30109",
+        "appearance_id": "22206",
+        "appearance": "worker_icon_2206"
+    },
+    "30110": {
+        "id": "30110",
+        "appearance_id": "22404",
+        "appearance": "worker_icon_2404"
+    },
+    "42405": {
+        "id": "42405",
+        "appearance_id": "22208",
+        "appearance": "worker_icon_2208"
+    },
+    "42406": {
+        "id": "42406",
+        "appearance_id": "22104",
+        "appearance": "worker_icon_2104"
+    },
+    "42407": {
+        "id": "42407",
+        "appearance_id": "21507",
+        "appearance": "worker_icon_1507"
+    },
+    "42408": {
+        "id": "42408",
+        "appearance_id": "21402",
+        "appearance": "worker_icon_1402"
+    },
+    "20905": {
+        "id": "20905",
+        "appearance_id": "22208",
+        "appearance": "worker_icon_2208"
+    },
+    "20906": {
+        "id": "20906",
+        "appearance_id": "22107",
+        "appearance": "worker_icon_2107"
+    },
+    "20907": {
+        "id": "20907",
+        "appearance_id": "21506",
+        "appearance": "worker_icon_1506"
+    },
+    "20908": {
+        "id": "20908",
+        "appearance_id": "21402",
+        "appearance": "worker_icon_1402"
+    },
+    "50607": {
+        "id": "50607",
+        "appearance_id": "22505",
+        "appearance": "worker_icon_2505"
+    },
+    "50608": {
+        "id": "50608",
+        "appearance_id": "22401",
+        "appearance": "worker_icon_2401"
+    },
+    "33201": {
+        "id": "33201",
+        "appearance_id": "21401",
+        "appearance": "worker_icon_1401"
+    },
+    "33202": {
+        "id": "33202",
+        "appearance_id": "21104",
+        "appearance": "worker_icon_1104"
+    },
+    "33209": {
+        "id": "33209",
+        "appearance_id": "22507",
+        "appearance": "worker_icon_2507"
+    },
+    "33210": {
+        "id": "33210",
+        "appearance_id": "22504",
+        "appearance": "worker_icon_2504"
+    },
+    "41403": {
+        "id": "41403",
+        "appearance_id": "22508",
+        "appearance": "worker_icon_2508"
+    },
+    "41404": {
+        "id": "41404",
+        "appearance_id": "22207",
+        "appearance": "worker_icon_2207"
+    },
+    "41405": {
+        "id": "41405",
+        "appearance_id": "21303",
+        "appearance": "worker_icon_1303"
+    },
+    "41406": {
+        "id": "41406",
+        "appearance_id": "21304",
+        "appearance": "worker_icon_1304"
+    },
+    "32201": {
+        "id": "32201",
+        "appearance_id": "22104",
+        "appearance": "worker_icon_2104"
+    },
+    "32202": {
+        "id": "32202",
+        "appearance_id": "22104",
+        "appearance": "worker_icon_2104"
+    },
+    "32203": {
+        "id": "32203",
+        "appearance_id": "21506",
+        "appearance": "worker_icon_1506"
+    },
+    "32204": {
+        "id": "32204",
+        "appearance_id": "21402",
+        "appearance": "worker_icon_1402"
+    },
+    "40403": {
+        "id": "40403",
+        "appearance_id": "22307",
+        "appearance": "worker_icon_2307"
+    },
+    "40404": {
+        "id": "40404",
+        "appearance_id": "22404",
+        "appearance": "worker_icon_2404"
+    },
+    "40405": {
+        "id": "40405",
+        "appearance_id": "21204",
+        "appearance": "worker_icon_1204"
+    },
+    "40406": {
+        "id": "40406",
+        "appearance_id": "21204",
+        "appearance": "worker_icon_1204"
+    },
+    "23005": {
+        "id": "23005",
+        "appearance_id": "22503",
+        "appearance": "worker_icon_2503"
+    },
+    "23006": {
+        "id": "23006",
+        "appearance_id": "22207",
+        "appearance": "worker_icon_2207"
+    },
+    "23007": {
+        "id": "23007",
+        "appearance_id": "21302",
+        "appearance": "worker_icon_1302"
+    },
+    "23008": {
+        "id": "23008",
+        "appearance_id": "21304",
+        "appearance": "worker_icon_1304"
+    },
+    "31201": {
+        "id": "31201",
+        "appearance_id": "21402",
+        "appearance": "worker_icon_1402"
+    },
+    "31202": {
+        "id": "31202",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "52709": {
+        "id": "52709",
+        "appearance_id": "22502",
+        "appearance": "worker_icon_2502"
+    },
+    "52710": {
+        "id": "52710",
+        "appearance_id": "22201",
+        "appearance": "worker_icon_2201"
+    },
+    "52711": {
+        "id": "52711",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "31209": {
+        "id": "31209",
+        "appearance_id": "22506",
+        "appearance": "worker_icon_2506"
+    },
+    "31210": {
+        "id": "31210",
+        "appearance_id": "22103",
+        "appearance": "worker_icon_2103"
+    },
+    "51701": {
+        "id": "51701",
+        "appearance_id": "21507",
+        "appearance": "worker_icon_1507"
+    },
+    "51702": {
+        "id": "51702",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "30201": {
+        "id": "30201",
+        "appearance_id": "21203",
+        "appearance": "worker_icon_1203"
+    },
+    "30202": {
+        "id": "30202",
+        "appearance_id": "21204",
+        "appearance": "worker_icon_1204"
+    },
+    "51709": {
+        "id": "51709",
+        "appearance_id": "22104",
+        "appearance": "worker_icon_2104"
+    },
+    "51710": {
+        "id": "51710",
+        "appearance_id": "22208",
+        "appearance": "worker_icon_2208"
+    },
+    "30209": {
+        "id": "30209",
+        "appearance_id": "22206",
+        "appearance": "worker_icon_2206"
+    },
+    "30210": {
+        "id": "30210",
+        "appearance_id": "22206",
+        "appearance": "worker_icon_2206"
+    },
+    "12803": {
+        "id": "12803",
+        "appearance_id": "21405",
+        "appearance": "worker_icon_1405"
+    },
+    "12804": {
+        "id": "12804",
+        "appearance_id": "21406",
+        "appearance": "worker_icon_1406"
+    },
+    "42505": {
+        "id": "42505",
+        "appearance_id": "22506",
+        "appearance": "worker_icon_2506"
+    },
+    "42506": {
+        "id": "42506",
+        "appearance_id": "22506",
+        "appearance": "worker_icon_2506"
+    },
+    "42507": {
+        "id": "42507",
+        "appearance_id": "21507",
+        "appearance": "worker_icon_1507"
+    },
+    "42508": {
+        "id": "42508",
+        "appearance_id": "21402",
+        "appearance": "worker_icon_1402"
+    },
+    "21005": {
+        "id": "21005",
+        "appearance_id": "22506",
+        "appearance": "worker_icon_2506"
+    },
+    "21006": {
+        "id": "21006",
+        "appearance_id": "22208",
+        "appearance": "worker_icon_2208"
+    },
+    "21007": {
+        "id": "21007",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "21008": {
+        "id": "21008",
+        "appearance_id": "21402",
+        "appearance": "worker_icon_1402"
+    },
+    "50705": {
+        "id": "50705",
+        "appearance_id": "22208",
+        "appearance": "worker_icon_2208"
+    },
+    "50706": {
+        "id": "50706",
+        "appearance_id": "22103",
+        "appearance": "worker_icon_2103"
+    },
+    "50707": {
+        "id": "50707",
+        "appearance_id": "21507",
+        "appearance": "worker_icon_1507"
+    },
+    "50708": {
+        "id": "50708",
+        "appearance_id": "21506",
+        "appearance": "worker_icon_1506"
+    },
+    "50709": {
+        "id": "50709",
+        "appearance_id": "22103",
+        "appearance": "worker_icon_2103"
+    },
+    "50710": {
+        "id": "50710",
+        "appearance_id": "22104",
+        "appearance": "worker_icon_2104"
+    },
+    "50711": {
+        "id": "50711",
+        "appearance_id": "22208",
+        "appearance": "worker_icon_2208"
+    },
+    "50712": {
+        "id": "50712",
+        "appearance_id": "22103",
+        "appearance": "worker_icon_2103"
+    },
+    "50713": {
+        "id": "50713",
+        "appearance_id": "22103",
+        "appearance": "worker_icon_2103"
+    },
+    "50714": {
+        "id": "50714",
+        "appearance_id": "22107",
+        "appearance": "worker_icon_2107"
+    },
+    "50715": {
+        "id": "50715",
+        "appearance_id": "22104",
+        "appearance": "worker_icon_2104"
+    },
+    "50716": {
+        "id": "50716",
+        "appearance_id": "22506",
+        "appearance": "worker_icon_2506"
+    },
+    "50717": {
+        "id": "50717",
+        "appearance_id": "22107",
+        "appearance": "worker_icon_2107"
+    },
+    "50718": {
+        "id": "50718",
+        "appearance_id": "22107",
+        "appearance": "worker_icon_2107"
+    },
+    "41503": {
+        "id": "41503",
+        "appearance_id": "22502",
+        "appearance": "worker_icon_2502"
+    },
+    "41504": {
+        "id": "41504",
+        "appearance_id": "22501",
+        "appearance": "worker_icon_2501"
+    },
+    "41505": {
+        "id": "41505",
+        "appearance_id": "21401",
+        "appearance": "worker_icon_1401"
+    },
+    "41506": {
+        "id": "41506",
+        "appearance_id": "21201",
+        "appearance": "worker_icon_1201"
+    },
+    "32301": {
+        "id": "32301",
+        "appearance_id": "22103",
+        "appearance": "worker_icon_2103"
+    },
+    "32302": {
+        "id": "32302",
+        "appearance_id": "22107",
+        "appearance": "worker_icon_2107"
+    },
+    "32303": {
+        "id": "32303",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "32304": {
+        "id": "32304",
+        "appearance_id": "21507",
+        "appearance": "worker_icon_1507"
+    },
+    "10801": {
+        "id": "10801",
+        "appearance_id": "22208",
+        "appearance": "worker_icon_2208"
+    },
+    "10802": {
+        "id": "10802",
+        "appearance_id": "22506",
+        "appearance": "worker_icon_2506"
+    },
+    "10803": {
+        "id": "10803",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "10804": {
+        "id": "10804",
+        "appearance_id": "21507",
+        "appearance": "worker_icon_1507"
+    },
+    "40503": {
+        "id": "40503",
+        "appearance_id": "22303",
+        "appearance": "worker_icon_2303"
+    },
+    "40504": {
+        "id": "40504",
+        "appearance_id": "22204",
+        "appearance": "worker_icon_2204"
+    },
+    "40505": {
+        "id": "40505",
+        "appearance_id": "21307",
+        "appearance": "worker_icon_1307"
+    },
+    "40506": {
+        "id": "40506",
+        "appearance_id": "21106",
+        "appearance": "worker_icon_1106"
+    },
+    "23105": {
+        "id": "23105",
+        "appearance_id": "22105",
+        "appearance": "worker_icon_2105"
+    },
+    "23106": {
+        "id": "23106",
+        "appearance_id": "22203",
+        "appearance": "worker_icon_2203"
+    },
+    "23107": {
+        "id": "23107",
+        "appearance_id": "21505",
+        "appearance": "worker_icon_1505"
+    },
+    "23108": {
+        "id": "23108",
+        "appearance_id": "21505",
+        "appearance": "worker_icon_1505"
+    },
+    "31301": {
+        "id": "31301",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "31302": {
+        "id": "31302",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "52807": {
+        "id": "52807",
+        "appearance_id": "22202",
+        "appearance": "worker_icon_2202"
+    },
+    "52808": {
+        "id": "52808",
+        "appearance_id": "22203",
+        "appearance": "worker_icon_2203"
+    },
+    "52809": {
+        "id": "52809",
+        "appearance_id": "21206",
+        "appearance": "worker_icon_1206"
+    },
+    "52810": {
+        "id": "52810",
+        "appearance_id": "21406",
+        "appearance": "worker_icon_1406"
+    },
+    "31309": {
+        "id": "31309",
+        "appearance_id": "22104",
+        "appearance": "worker_icon_2104"
+    },
+    "31310": {
+        "id": "31310",
+        "appearance_id": "22208",
+        "appearance": "worker_icon_2208"
+    },
+    "51801": {
+        "id": "51801",
+        "appearance_id": "21507",
+        "appearance": "worker_icon_1507"
+    },
+    "51802": {
+        "id": "51802",
+        "appearance_id": "21506",
+        "appearance": "worker_icon_1506"
+    },
+    "30301": {
+        "id": "30301",
+        "appearance_id": "21103",
+        "appearance": "worker_icon_1103"
+    },
+    "30302": {
+        "id": "30302",
+        "appearance_id": "21106",
+        "appearance": "worker_icon_1106"
+    },
+    "51809": {
+        "id": "51809",
+        "appearance_id": "22506",
+        "appearance": "worker_icon_2506"
+    },
+    "51810": {
+        "id": "51810",
+        "appearance_id": "22104",
+        "appearance": "worker_icon_2104"
+    },
+    "30309": {
+        "id": "30309",
+        "appearance_id": "22204",
+        "appearance": "worker_icon_2204"
+    },
+    "30310": {
+        "id": "30310",
+        "appearance_id": "22303",
+        "appearance": "worker_icon_2303"
+    },
+    "12903": {
+        "id": "12903",
+        "appearance_id": "21202",
+        "appearance": "worker_icon_1202"
+    },
+    "12904": {
+        "id": "12904",
+        "appearance_id": "21202",
+        "appearance": "worker_icon_1202"
+    },
+    "42603": {
+        "id": "42603",
+        "appearance_id": "22501",
+        "appearance": "worker_icon_2501"
+    },
+    "42604": {
+        "id": "42604",
+        "appearance_id": "22306",
+        "appearance": "worker_icon_2306"
+    },
+    "42605": {
+        "id": "42605",
+        "appearance_id": "21503",
+        "appearance": "worker_icon_1503"
+    },
+    "42606": {
+        "id": "42606",
+        "appearance_id": "21305",
+        "appearance": "worker_icon_1305"
+    },
+    "21105": {
+        "id": "21105",
+        "appearance_id": "22506",
+        "appearance": "worker_icon_2506"
+    },
+    "21106": {
+        "id": "21106",
+        "appearance_id": "22107",
+        "appearance": "worker_icon_2107"
+    },
+    "21107": {
+        "id": "21107",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "21108": {
+        "id": "21108",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "50807": {
+        "id": "50807",
+        "appearance_id": "22506",
+        "appearance": "worker_icon_2506"
+    },
+    "50808": {
+        "id": "50808",
+        "appearance_id": "22208",
+        "appearance": "worker_icon_2208"
+    },
+    "33401": {
+        "id": "33401",
+        "appearance_id": "21102",
+        "appearance": "worker_icon_1102"
+    },
+    "33402": {
+        "id": "33402",
+        "appearance_id": "21104",
+        "appearance": "worker_icon_1104"
+    },
+    "33409": {
+        "id": "33409",
+        "appearance_id": "22507",
+        "appearance": "worker_icon_2507"
+    },
+    "33410": {
+        "id": "33410",
+        "appearance_id": "22507",
+        "appearance": "worker_icon_2507"
+    },
+    "41603": {
+        "id": "41603",
+        "appearance_id": "22403",
+        "appearance": "worker_icon_2403"
+    },
+    "41604": {
+        "id": "41604",
+        "appearance_id": "22401",
+        "appearance": "worker_icon_2401"
+    },
+    "41605": {
+        "id": "41605",
+        "appearance_id": "21303",
+        "appearance": "worker_icon_1303"
+    },
+    "41606": {
+        "id": "41606",
+        "appearance_id": "21404",
+        "appearance": "worker_icon_1404"
+    },
+    "20105": {
+        "id": "20105",
+        "appearance_id": "22307",
+        "appearance": "worker_icon_2307"
+    },
+    "20106": {
+        "id": "20106",
+        "appearance_id": "22404",
+        "appearance": "worker_icon_2404"
+    },
+    "20107": {
+        "id": "20107",
+        "appearance_id": "21203",
+        "appearance": "worker_icon_1203"
+    },
+    "20108": {
+        "id": "20108",
+        "appearance_id": "21204",
+        "appearance": "worker_icon_1204"
+    },
+    "32401": {
+        "id": "32401",
+        "appearance_id": "22506",
+        "appearance": "worker_icon_2506"
+    },
+    "32402": {
+        "id": "32402",
+        "appearance_id": "22506",
+        "appearance": "worker_icon_2506"
+    },
+    "32403": {
+        "id": "32403",
+        "appearance_id": "21402",
+        "appearance": "worker_icon_1402"
+    },
+    "32404": {
+        "id": "32404",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "10901": {
+        "id": "10901",
+        "appearance_id": "22104",
+        "appearance": "worker_icon_2104"
+    },
+    "10902": {
+        "id": "10902",
+        "appearance_id": "22107",
+        "appearance": "worker_icon_2107"
+    },
+    "10903": {
+        "id": "10903",
+        "appearance_id": "21506",
+        "appearance": "worker_icon_1506"
+    },
+    "10904": {
+        "id": "10904",
+        "appearance_id": "21507",
+        "appearance": "worker_icon_1507"
+    },
+    "40603": {
+        "id": "40603",
+        "appearance_id": "22502",
+        "appearance": "worker_icon_2502"
+    },
+    "40604": {
+        "id": "40604",
+        "appearance_id": "22502",
+        "appearance": "worker_icon_2502"
+    },
+    "40605": {
+        "id": "40605",
+        "appearance_id": "21403",
+        "appearance": "worker_icon_1403"
+    },
+    "40606": {
+        "id": "40606",
+        "appearance_id": "21201",
+        "appearance": "worker_icon_1201"
+    },
+    "23205": {
+        "id": "23205",
+        "appearance_id": "22505",
+        "appearance": "worker_icon_2505"
+    },
+    "23206": {
+        "id": "23206",
+        "appearance_id": "22201",
+        "appearance": "worker_icon_2201"
+    },
+    "23207": {
+        "id": "23207",
+        "appearance_id": "21304",
+        "appearance": "worker_icon_1304"
+    },
+    "23208": {
+        "id": "23208",
+        "appearance_id": "21403",
+        "appearance": "worker_icon_1403"
+    },
+    "31401": {
+        "id": "31401",
+        "appearance_id": "21502",
+        "appearance": "worker_icon_1502"
+    },
+    "31402": {
+        "id": "31402",
+        "appearance_id": "21403",
+        "appearance": "worker_icon_1403"
+    },
+    "52907": {
+        "id": "52907",
+        "appearance_id": "22203",
+        "appearance": "worker_icon_2203"
+    },
+    "52908": {
+        "id": "52908",
+        "appearance_id": "22203",
+        "appearance": "worker_icon_2203"
+    },
+    "52909": {
+        "id": "52909",
+        "appearance_id": "21206",
+        "appearance": "worker_icon_1206"
+    },
+    "52910": {
+        "id": "52910",
+        "appearance_id": "21504",
+        "appearance": "worker_icon_1504"
+    },
+    "31409": {
+        "id": "31409",
+        "appearance_id": "22504",
+        "appearance": "worker_icon_2504"
+    },
+    "31410": {
+        "id": "31410",
+        "appearance_id": "22207",
+        "appearance": "worker_icon_2207"
+    },
+    "51901": {
+        "id": "51901",
+        "appearance_id": "21507",
+        "appearance": "worker_icon_1507"
+    },
+    "51902": {
+        "id": "51902",
+        "appearance_id": "21506",
+        "appearance": "worker_icon_1506"
+    },
+    "30401": {
+        "id": "30401",
+        "appearance_id": "21205",
+        "appearance": "worker_icon_1205"
+    },
+    "30402": {
+        "id": "30402",
+        "appearance_id": "21203",
+        "appearance": "worker_icon_1203"
+    },
+    "51909": {
+        "id": "51909",
+        "appearance_id": "22107",
+        "appearance": "worker_icon_2107"
+    },
+    "51910": {
+        "id": "51910",
+        "appearance_id": "22104",
+        "appearance": "worker_icon_2104"
+    },
+    "13001": {
+        "id": "13001",
+        "appearance_id": "22201",
+        "appearance": "worker_icon_2201"
+    },
+    "13002": {
+        "id": "13002",
+        "appearance_id": "22508",
+        "appearance": "worker_icon_2508"
+    },
+    "13003": {
+        "id": "13003",
+        "appearance_id": "21303",
+        "appearance": "worker_icon_1303"
+    },
+    "13004": {
+        "id": "13004",
+        "appearance_id": "21503",
+        "appearance": "worker_icon_1503"
+    },
+    "42705": {
+        "id": "42705",
+        "appearance_id": "22505",
+        "appearance": "worker_icon_2505"
+    },
+    "42706": {
+        "id": "42706",
+        "appearance_id": "22507",
+        "appearance": "worker_icon_2507"
+    },
+    "42707": {
+        "id": "42707",
+        "appearance_id": "21502",
+        "appearance": "worker_icon_1502"
+    },
+    "42708": {
+        "id": "42708",
+        "appearance_id": "21306",
+        "appearance": "worker_icon_1306"
+    },
+    "21205": {
+        "id": "21205",
+        "appearance_id": "22103",
+        "appearance": "worker_icon_2103"
+    },
+    "21206": {
+        "id": "21206",
+        "appearance_id": "22104",
+        "appearance": "worker_icon_2104"
+    },
+    "21207": {
+        "id": "21207",
+        "appearance_id": "21506",
+        "appearance": "worker_icon_1506"
+    },
+    "21208": {
+        "id": "21208",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "50907": {
+        "id": "50907",
+        "appearance_id": "22506",
+        "appearance": "worker_icon_2506"
+    },
+    "50908": {
+        "id": "50908",
+        "appearance_id": "22506",
+        "appearance": "worker_icon_2506"
+    },
+    "50909": {
+        "id": "50909",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "50910": {
+        "id": "50910",
+        "appearance_id": "21507",
+        "appearance": "worker_icon_1507"
+    },
+    "41705": {
+        "id": "41705",
+        "appearance_id": "22506",
+        "appearance": "worker_icon_2506"
+    },
+    "41706": {
+        "id": "41706",
+        "appearance_id": "22107",
+        "appearance": "worker_icon_2107"
+    },
+    "41707": {
+        "id": "41707",
+        "appearance_id": "21507",
+        "appearance": "worker_icon_1507"
+    },
+    "41708": {
+        "id": "41708",
+        "appearance_id": "21507",
+        "appearance": "worker_icon_1507"
+    },
+    "20205": {
+        "id": "20205",
+        "appearance_id": "22404",
+        "appearance": "worker_icon_2404"
+    },
+    "20206": {
+        "id": "20206",
+        "appearance_id": "22101",
+        "appearance": "worker_icon_2101"
+    },
+    "20207": {
+        "id": "20207",
+        "appearance_id": "21204",
+        "appearance": "worker_icon_1204"
+    },
+    "20208": {
+        "id": "20208",
+        "appearance_id": "21203",
+        "appearance": "worker_icon_1203"
+    },
+    "32501": {
+        "id": "32501",
+        "appearance_id": "22506",
+        "appearance": "worker_icon_2506"
+    },
+    "32502": {
+        "id": "32502",
+        "appearance_id": "22208",
+        "appearance": "worker_icon_2208"
+    },
+    "32503": {
+        "id": "32503",
+        "appearance_id": "21506",
+        "appearance": "worker_icon_1506"
+    },
+    "32504": {
+        "id": "32504",
+        "appearance_id": "21507",
+        "appearance": "worker_icon_1507"
+    },
+    "11001": {
+        "id": "11001",
+        "appearance_id": "22107",
+        "appearance": "worker_icon_2107"
+    },
+    "11002": {
+        "id": "11002",
+        "appearance_id": "22104",
+        "appearance": "worker_icon_2104"
+    },
+    "11003": {
+        "id": "11003",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "11004": {
+        "id": "11004",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "40701": {
+        "id": "40701",
+        "appearance_id": "22506",
+        "appearance": "worker_icon_2506"
+    },
+    "40702": {
+        "id": "40702",
+        "appearance_id": "22208",
+        "appearance": "worker_icon_2208"
+    },
+    "40703": {
+        "id": "40703",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "40704": {
+        "id": "40704",
+        "appearance_id": "21402",
+        "appearance": "worker_icon_1402"
+    },
+    "31501": {
+        "id": "31501",
+        "appearance_id": "21304",
+        "appearance": "worker_icon_1304"
+    },
+    "31502": {
+        "id": "31502",
+        "appearance_id": "21305",
+        "appearance": "worker_icon_1305"
+    },
+    "53007": {
+        "id": "53007",
+        "appearance_id": "22308",
+        "appearance": "worker_icon_2308"
+    },
+    "53008": {
+        "id": "53008",
+        "appearance_id": "22405",
+        "appearance": "worker_icon_2405"
+    },
+    "53009": {
+        "id": "53009",
+        "appearance_id": "21101",
+        "appearance": "worker_icon_1101"
+    },
+    "53010": {
+        "id": "53010",
+        "appearance_id": "21501",
+        "appearance": "worker_icon_1501"
+    },
+    "31509": {
+        "id": "31509",
+        "appearance_id": "22406",
+        "appearance": "worker_icon_2406"
+    },
+    "31510": {
+        "id": "31510",
+        "appearance_id": "22406",
+        "appearance": "worker_icon_2406"
+    },
+    "53415": {
+        "id": "53415",
+        "appearance_id": "21102",
+        "appearance": "worker_icon_1102"
+    },
+    "53416": {
+        "id": "53416",
+        "appearance_id": "21102",
+        "appearance": "worker_icon_1102"
+    },
+    "53417": {
+        "id": "53417",
+        "appearance_id": "21102",
+        "appearance": "worker_icon_1102"
+    },
+    "53418": {
+        "id": "53418",
+        "appearance_id": "21102",
+        "appearance": "worker_icon_1102"
+    },
+    "30609": {
+        "id": "30609",
+        "appearance_id": "22308",
+        "appearance": "worker_icon_2308"
+    },
+    "42005": {
+        "id": "42005",
+        "appearance_id": "22107",
+        "appearance": "worker_icon_2107"
+    },
+    "11404": {
+        "id": "11404",
+        "appearance_id": "21301",
+        "appearance": "worker_icon_1301"
+    },
+    "30809": {
+        "id": "30809",
+        "appearance_id": "22104",
+        "appearance": "worker_icon_2104"
+    },
+    "30810": {
+        "id": "30810",
+        "appearance_id": "22506",
+        "appearance": "worker_icon_2506"
+    },
+    "30909": {
+        "id": "30909",
+        "appearance_id": "22506",
+        "appearance": "worker_icon_2506"
+    },
+    "52001": {
+        "id": "52001",
+        "appearance_id": "21402",
+        "appearance": "worker_icon_1402"
+    },
+    "52002": {
+        "id": "52002",
+        "appearance_id": "21402",
+        "appearance": "worker_icon_1402"
+    },
+    "30409": {
+        "id": "30409",
+        "appearance_id": "22101",
+        "appearance": "worker_icon_2101"
+    },
+    "30410": {
+        "id": "30410",
+        "appearance_id": "22101",
+        "appearance": "worker_icon_2101"
+    },
+    "30501": {
+        "id": "30501",
+        "appearance_id": "21103",
+        "appearance": "worker_icon_1103"
+    },
+    "30502": {
+        "id": "30502",
+        "appearance_id": "21307",
+        "appearance": "worker_icon_1307"
+    },
+    "50810": {
+        "id": "50810",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "50809": {
+        "id": "50809",
+        "appearance_id": "21402",
+        "appearance": "worker_icon_1402"
+    },
+    "52009": {
+        "id": "52009",
+        "appearance_id": "22208",
+        "appearance": "worker_icon_2208"
+    },
+    "52010": {
+        "id": "52010",
+        "appearance_id": "22103",
+        "appearance": "worker_icon_2103"
+    },
+    "50720": {
+        "id": "50720",
+        "appearance_id": "22107",
+        "appearance": "worker_icon_2107"
+    },
+    "50719": {
+        "id": "50719",
+        "appearance_id": "22103",
+        "appearance": "worker_icon_2103"
+    },
+    "13101": {
+        "id": "13101",
+        "appearance_id": "22102",
+        "appearance": "worker_icon_2102"
+    },
+    "13102": {
+        "id": "13102",
+        "appearance_id": "22202",
+        "appearance": "worker_icon_2202"
+    },
+    "13103": {
+        "id": "13103",
+        "appearance_id": "21206",
+        "appearance": "worker_icon_1206"
+    },
+    "13104": {
+        "id": "13104",
+        "appearance_id": "21504",
+        "appearance": "worker_icon_1504"
+    },
+    "40906": {
+        "id": "40906",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "40905": {
+        "id": "40905",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "42803": {
+        "id": "42803",
+        "appearance_id": "22203",
+        "appearance": "worker_icon_2203"
+    },
+    "42804": {
+        "id": "42804",
+        "appearance_id": "22105",
+        "appearance": "worker_icon_2105"
+    },
+    "42805": {
+        "id": "42805",
+        "appearance_id": "21202",
+        "appearance": "worker_icon_1202"
+    },
+    "42806": {
+        "id": "42806",
+        "appearance_id": "21504",
+        "appearance": "worker_icon_1504"
+    },
+    "40904": {
+        "id": "40904",
+        "appearance_id": "22107",
+        "appearance": "worker_icon_2107"
+    },
+    "40903": {
+        "id": "40903",
+        "appearance_id": "22506",
+        "appearance": "worker_icon_2506"
+    },
+    "21305": {
+        "id": "21305",
+        "appearance_id": "22208",
+        "appearance": "worker_icon_2208"
+    },
+    "21306": {
+        "id": "21306",
+        "appearance_id": "22103",
+        "appearance": "worker_icon_2103"
+    },
+    "21307": {
+        "id": "21307",
+        "appearance_id": "21507",
+        "appearance": "worker_icon_1507"
+    },
+    "21308": {
+        "id": "21308",
+        "appearance_id": "21402",
+        "appearance": "worker_icon_1402"
+    },
+    "51321": {
+        "id": "51321",
+        "appearance_id": "21507",
+        "appearance": "worker_icon_1507"
+    },
+    "51322": {
+        "id": "51322",
+        "appearance_id": "21506",
+        "appearance": "worker_icon_1506"
+    },
+    "51007": {
+        "id": "51007",
+        "appearance_id": "22107",
+        "appearance": "worker_icon_2107"
+    },
+    "51008": {
+        "id": "51008",
+        "appearance_id": "22506",
+        "appearance": "worker_icon_2506"
+    },
+    "51009": {
+        "id": "51009",
+        "appearance_id": "21507",
+        "appearance": "worker_icon_1507"
+    },
+    "51010": {
+        "id": "51010",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "51011": {
+        "id": "51011",
+        "appearance_id": "21402",
+        "appearance": "worker_icon_1402"
+    },
+    "51012": {
+        "id": "51012",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "51013": {
+        "id": "51013",
+        "appearance_id": "22104",
+        "appearance": "worker_icon_2104"
+    },
+    "51014": {
+        "id": "51014",
+        "appearance_id": "22506",
+        "appearance": "worker_icon_2506"
+    },
+    "51015": {
+        "id": "51015",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "51016": {
+        "id": "51016",
+        "appearance_id": "21402",
+        "appearance": "worker_icon_1402"
+    },
+    "51017": {
+        "id": "51017",
+        "appearance_id": "22103",
+        "appearance": "worker_icon_2103"
+    },
+    "51018": {
+        "id": "51018",
+        "appearance_id": "22104",
+        "appearance": "worker_icon_2104"
+    },
+    "53412": {
+        "id": "53412",
+        "appearance_id": "22507",
+        "appearance": "worker_icon_2507"
+    },
+    "53411": {
+        "id": "53411",
+        "appearance_id": "22507",
+        "appearance": "worker_icon_2507"
+    },
+    "41805": {
+        "id": "41805",
+        "appearance_id": "22103",
+        "appearance": "worker_icon_2103"
+    },
+    "41806": {
+        "id": "41806",
+        "appearance_id": "22208",
+        "appearance": "worker_icon_2208"
+    },
+    "41807": {
+        "id": "41807",
+        "appearance_id": "21506",
+        "appearance": "worker_icon_1506"
+    },
+    "41808": {
+        "id": "41808",
+        "appearance_id": "21507",
+        "appearance": "worker_icon_1507"
+    },
+    "20305": {
+        "id": "20305",
+        "appearance_id": "22304",
+        "appearance": "worker_icon_2304"
+    },
+    "20306": {
+        "id": "20306",
+        "appearance_id": "22304",
+        "appearance": "worker_icon_2304"
+    },
+    "20307": {
+        "id": "20307",
+        "appearance_id": "21103",
+        "appearance": "worker_icon_1103"
+    },
+    "20308": {
+        "id": "20308",
+        "appearance_id": "21307",
+        "appearance": "worker_icon_1307"
+    },
+    "53410": {
+        "id": "53410",
+        "appearance_id": "21404",
+        "appearance": "worker_icon_1404"
+    },
+    "53409": {
+        "id": "53409",
+        "appearance_id": "21102",
+        "appearance": "worker_icon_1102"
+    },
+    "53408": {
+        "id": "53408",
+        "appearance_id": "22504",
+        "appearance": "worker_icon_2504"
+    },
+    "53407": {
+        "id": "53407",
+        "appearance_id": "22106",
+        "appearance": "worker_icon_2106"
+    },
+    "32601": {
+        "id": "32601",
+        "appearance_id": "21101",
+        "appearance": "worker_icon_1101"
+    },
+    "32602": {
+        "id": "32602",
+        "appearance_id": "21306",
+        "appearance": "worker_icon_1306"
+    },
+    "42006": {
+        "id": "42006",
+        "appearance_id": "22104",
+        "appearance": "worker_icon_2104"
+    },
+    "50114": {
+        "id": "50114",
+        "appearance_id": "21203",
+        "appearance": "worker_icon_1203"
+    },
+    "11101": {
+        "id": "11101",
+        "appearance_id": "22107",
+        "appearance": "worker_icon_2107"
+    },
+    "11102": {
+        "id": "11102",
+        "appearance_id": "22208",
+        "appearance": "worker_icon_2208"
+    },
+    "11103": {
+        "id": "11103",
+        "appearance_id": "21506",
+        "appearance": "worker_icon_1506"
+    },
+    "11104": {
+        "id": "11104",
+        "appearance_id": "21507",
+        "appearance": "worker_icon_1507"
+    },
+    "32609": {
+        "id": "32609",
+        "appearance_id": "22505",
+        "appearance": "worker_icon_2505"
+    },
+    "32610": {
+        "id": "32610",
+        "appearance_id": "22407",
+        "appearance": "worker_icon_2407"
+    },
+    "40803": {
+        "id": "40803",
+        "appearance_id": "22107",
+        "appearance": "worker_icon_2107"
+    },
+    "40804": {
+        "id": "40804",
+        "appearance_id": "22103",
+        "appearance": "worker_icon_2103"
+    },
+    "40805": {
+        "id": "40805",
+        "appearance_id": "21507",
+        "appearance": "worker_icon_1507"
+    },
+    "40806": {
+        "id": "40806",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "41306": {
+        "id": "41306",
+        "appearance_id": "21402",
+        "appearance": "worker_icon_1402"
+    },
+    "41305": {
+        "id": "41305",
+        "appearance_id": "21402",
+        "appearance": "worker_icon_1402"
+    },
+    "41304": {
+        "id": "41304",
+        "appearance_id": "22506",
+        "appearance": "worker_icon_2506"
+    },
+    "41303": {
+        "id": "41303",
+        "appearance_id": "22208",
+        "appearance": "worker_icon_2208"
+    },
+    "50410": {
+        "id": "50410",
+        "appearance_id": "21204",
+        "appearance": "worker_icon_1204"
+    },
+    "50409": {
+        "id": "50409",
+        "appearance_id": "21203",
+        "appearance": "worker_icon_1203"
+    },
+    "23405": {
+        "id": "23405",
+        "appearance_id": "22405",
+        "appearance": "worker_icon_2405"
+    },
+    "23406": {
+        "id": "23406",
+        "appearance_id": "22504",
+        "appearance": "worker_icon_2504"
+    },
+    "23407": {
+        "id": "23407",
+        "appearance_id": "21502",
+        "appearance": "worker_icon_1502"
+    },
+    "23408": {
+        "id": "23408",
+        "appearance_id": "21502",
+        "appearance": "worker_icon_1502"
+    },
+    "31601": {
+        "id": "31601",
+        "appearance_id": "21101",
+        "appearance": "worker_icon_1101"
+    },
+    "31602": {
+        "id": "31602",
+        "appearance_id": "21401",
+        "appearance": "worker_icon_1401"
+    },
+    "53107": {
+        "id": "53107",
+        "appearance_id": "22105",
+        "appearance": "worker_icon_2105"
+    },
+    "53108": {
+        "id": "53108",
+        "appearance_id": "22105",
+        "appearance": "worker_icon_2105"
+    },
+    "53109": {
+        "id": "53109",
+        "appearance_id": "21505",
+        "appearance": "worker_icon_1505"
+    },
+    "53110": {
+        "id": "53110",
+        "appearance_id": "21504",
+        "appearance": "worker_icon_1504"
+    },
+    "10103": {
+        "id": "10103",
+        "appearance_id": "21203",
+        "appearance": "worker_icon_1203"
+    },
+    "10104": {
+        "id": "10104",
+        "appearance_id": "21204",
+        "appearance": "worker_icon_1204"
+    },
+    "31609": {
+        "id": "31609",
+        "appearance_id": "22302",
+        "appearance": "worker_icon_2302"
+    },
+    "31610": {
+        "id": "31610",
+        "appearance_id": "22106",
+        "appearance": "worker_icon_2106"
+    },
+    "10201": {
+        "id": "10201",
+        "appearance_id": "22404",
+        "appearance": "worker_icon_2404"
+    },
+    "10202": {
+        "id": "10202",
+        "appearance_id": "22205",
+        "appearance": "worker_icon_2205"
+    },
+    "41905": {
+        "id": "41905",
+        "appearance_id": "22107",
+        "appearance": "worker_icon_2107"
+    },
+    "41906": {
+        "id": "41906",
+        "appearance_id": "22506",
+        "appearance": "worker_icon_2506"
+    },
+    "52614": {
+        "id": "52614",
+        "appearance_id": "21303",
+        "appearance": "worker_icon_1303"
+    },
+    "52701": {
+        "id": "52701",
+        "appearance_id": "21401",
+        "appearance": "worker_icon_1401"
+    },
+    "32910": {
+        "id": "32910",
+        "appearance_id": "22105",
+        "appearance": "worker_icon_2105"
+    },
+    "32909": {
+        "id": "32909",
+        "appearance_id": "22203",
+        "appearance": "worker_icon_2203"
+    },
+    "32902": {
+        "id": "32902",
+        "appearance_id": "21202",
+        "appearance": "worker_icon_1202"
+    },
+    "32901": {
+        "id": "32901",
+        "appearance_id": "21504",
+        "appearance": "worker_icon_1504"
+    },
+    "52101": {
+        "id": "52101",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "52102": {
+        "id": "52102",
+        "appearance_id": "21506",
+        "appearance": "worker_icon_1506"
+    },
+    "32802": {
+        "id": "32802",
+        "appearance_id": "21202",
+        "appearance": "worker_icon_1202"
+    },
+    "32801": {
+        "id": "32801",
+        "appearance_id": "21206",
+        "appearance": "worker_icon_1206"
+    },
+    "30601": {
+        "id": "30601",
+        "appearance_id": "21303",
+        "appearance": "worker_icon_1303"
+    },
+    "30602": {
+        "id": "30602",
+        "appearance_id": "21502",
+        "appearance": "worker_icon_1502"
+    },
+    "22806": {
+        "id": "22806",
+        "appearance_id": "22203",
+        "appearance": "worker_icon_2203"
+    },
+    "22805": {
+        "id": "22805",
+        "appearance_id": "22105",
+        "appearance": "worker_icon_2105"
+    },
+    "52109": {
+        "id": "52109",
+        "appearance_id": "22208",
+        "appearance": "worker_icon_2208"
+    },
+    "52110": {
+        "id": "52110",
+        "appearance_id": "22103",
+        "appearance": "worker_icon_2103"
+    },
+    "12902": {
+        "id": "12902",
+        "appearance_id": "22202",
+        "appearance": "worker_icon_2202"
+    },
+    "12901": {
+        "id": "12901",
+        "appearance_id": "22203",
+        "appearance": "worker_icon_2203"
+    },
+    "13201": {
+        "id": "13201",
+        "appearance_id": "22201",
+        "appearance": "worker_icon_2201"
+    },
+    "13202": {
+        "id": "13202",
+        "appearance_id": "22308",
+        "appearance": "worker_icon_2308"
+    },
+    "13203": {
+        "id": "13203",
+        "appearance_id": "21501",
+        "appearance": "worker_icon_1501"
+    },
+    "13204": {
+        "id": "13204",
+        "appearance_id": "21301",
+        "appearance": "worker_icon_1301"
+    },
+    "12802": {
+        "id": "12802",
+        "appearance_id": "22203",
+        "appearance": "worker_icon_2203"
+    },
+    "12801": {
+        "id": "12801",
+        "appearance_id": "22105",
+        "appearance": "worker_icon_2105"
+    },
+    "42903": {
+        "id": "42903",
+        "appearance_id": "22105",
+        "appearance": "worker_icon_2105"
+    },
+    "42904": {
+        "id": "42904",
+        "appearance_id": "22202",
+        "appearance": "worker_icon_2202"
+    },
+    "42905": {
+        "id": "42905",
+        "appearance_id": "21405",
+        "appearance": "worker_icon_1405"
+    },
+    "42906": {
+        "id": "42906",
+        "appearance_id": "21405",
+        "appearance": "worker_icon_1405"
+    },
+    "31704": {
+        "id": "31704",
+        "appearance_id": "21507",
+        "appearance": "worker_icon_1507"
+    },
+    "31703": {
+        "id": "31703",
+        "appearance_id": "21507",
+        "appearance": "worker_icon_1507"
+    },
+    "21405": {
+        "id": "21405",
+        "appearance_id": "22401",
+        "appearance": "worker_icon_2401"
+    },
+    "21406": {
+        "id": "21406",
+        "appearance_id": "22405",
+        "appearance": "worker_icon_2405"
+    },
+    "21407": {
+        "id": "21407",
+        "appearance_id": "21404",
+        "appearance": "worker_icon_1404"
+    },
+    "21408": {
+        "id": "21408",
+        "appearance_id": "21201",
+        "appearance": "worker_icon_1201"
+    },
+    "52702": {
+        "id": "52702",
+        "appearance_id": "21401",
+        "appearance": "worker_icon_1401"
+    },
+    "10101": {
+        "id": "10101",
+        "appearance_id": "22101",
+        "appearance": "worker_icon_2101"
+    },
+    "51107": {
+        "id": "51107",
+        "appearance_id": "22103",
+        "appearance": "worker_icon_2103"
+    },
+    "51108": {
+        "id": "51108",
+        "appearance_id": "22107",
+        "appearance": "worker_icon_2107"
+    },
+    "51109": {
+        "id": "51109",
+        "appearance_id": "21506",
+        "appearance": "worker_icon_1506"
+    },
+    "51110": {
+        "id": "51110",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "51111": {
+        "id": "51111",
+        "appearance_id": "22104",
+        "appearance": "worker_icon_2104"
+    },
+    "51112": {
+        "id": "51112",
+        "appearance_id": "22107",
+        "appearance": "worker_icon_2107"
+    },
+    "51113": {
+        "id": "51113",
+        "appearance_id": "21402",
+        "appearance": "worker_icon_1402"
+    },
+    "51114": {
+        "id": "51114",
+        "appearance_id": "21506",
+        "appearance": "worker_icon_1506"
+    },
+    "51115": {
+        "id": "51115",
+        "appearance_id": "22103",
+        "appearance": "worker_icon_2103"
+    },
+    "51116": {
+        "id": "51116",
+        "appearance_id": "22208",
+        "appearance": "worker_icon_2208"
+    },
+    "51117": {
+        "id": "51117",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "51118": {
+        "id": "51118",
+        "appearance_id": "21402",
+        "appearance": "worker_icon_1402"
+    },
+    "51119": {
+        "id": "51119",
+        "appearance_id": "22506",
+        "appearance": "worker_icon_2506"
+    },
+    "51120": {
+        "id": "51120",
+        "appearance_id": "22208",
+        "appearance": "worker_icon_2208"
+    },
+    "51121": {
+        "id": "51121",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "51122": {
+        "id": "51122",
+        "appearance_id": "21402",
+        "appearance": "worker_icon_1402"
+    },
+    "41907": {
+        "id": "41907",
+        "appearance_id": "21506",
+        "appearance": "worker_icon_1506"
+    },
+    "41908": {
+        "id": "41908",
+        "appearance_id": "21402",
+        "appearance": "worker_icon_1402"
+    },
+    "20405": {
+        "id": "20405",
+        "appearance_id": "22206",
+        "appearance": "worker_icon_2206"
+    },
+    "20406": {
+        "id": "20406",
+        "appearance_id": "22101",
+        "appearance": "worker_icon_2101"
+    },
+    "20407": {
+        "id": "20407",
+        "appearance_id": "21204",
+        "appearance": "worker_icon_1204"
+    },
+    "20408": {
+        "id": "20408",
+        "appearance_id": "21204",
+        "appearance": "worker_icon_1204"
+    },
+    "50115": {
+        "id": "50115",
+        "appearance_id": "22404",
+        "appearance": "worker_icon_2404"
+    },
+    "50116": {
+        "id": "50116",
+        "appearance_id": "22101",
+        "appearance": "worker_icon_2101"
+    },
+    "50107": {
+        "id": "50107",
+        "appearance_id": "22307",
+        "appearance": "worker_icon_2307"
+    },
+    "50108": {
+        "id": "50108",
+        "appearance_id": "22206",
+        "appearance": "worker_icon_2206"
+    },
+    "32701": {
+        "id": "32701",
+        "appearance_id": "22505",
+        "appearance": "worker_icon_2505"
+    },
+    "32702": {
+        "id": "32702",
+        "appearance_id": "22301",
+        "appearance": "worker_icon_2301"
+    },
+    "32703": {
+        "id": "32703",
+        "appearance_id": "21101",
+        "appearance": "worker_icon_1101"
+    },
+    "32704": {
+        "id": "32704",
+        "appearance_id": "21101",
+        "appearance": "worker_icon_1101"
+    },
+    "11201": {
+        "id": "11201",
+        "appearance_id": "22103",
+        "appearance": "worker_icon_2103"
+    },
+    "11202": {
+        "id": "11202",
+        "appearance_id": "22506",
+        "appearance": "worker_icon_2506"
+    },
+    "11203": {
+        "id": "11203",
+        "appearance_id": "21105",
+        "appearance": "worker_icon_1105"
+    },
+    "11204": {
+        "id": "11204",
+        "appearance_id": "21507",
+        "appearance": "worker_icon_1507"
+    },
+    "50117": {
+        "id": "50117",
+        "appearance_id": "21204",
+        "appearance": "worker_icon_1204"
+    },
+    "50118": {
+        "id": "50118",
+        "appearance_id": "21203",
+        "appearance": "worker_icon_1203"
+    },
+    "50119": {
+        "id": "50119",
+        "appearance_id": "22206",
+        "appearance": "worker_icon_2206"
+    },
+    "50120": {
+        "id": "50120",
+        "appearance_id": "22101",
+        "appearance": "worker_icon_2101"
+    },
+    "50121": {
+        "id": "50121",
+        "appearance_id": "21203",
+        "appearance": "worker_icon_1203"
+    },
+    "50122": {
+        "id": "50122",
+        "appearance_id": "21204",
+        "appearance": "worker_icon_1204"
+    },
+    "50123": {
+        "id": "50123",
+        "appearance_id": "22205",
+        "appearance": "worker_icon_2205"
+    },
+    "50124": {
+        "id": "50124",
+        "appearance_id": "22307",
+        "appearance": "worker_icon_2307"
+    },
+    "50125": {
+        "id": "50125",
+        "appearance_id": "21204",
+        "appearance": "worker_icon_1204"
+    },
+    "50126": {
+        "id": "50126",
+        "appearance_id": "21204",
+        "appearance": "worker_icon_1204"
+    },
+    "50113": {
+        "id": "50113",
+        "appearance_id": "21203",
+        "appearance": "worker_icon_1203"
+    },
+    "50112": {
+        "id": "50112",
+        "appearance_id": "22205",
+        "appearance": "worker_icon_2205"
+    },
+    "50111": {
+        "id": "50111",
+        "appearance_id": "22101",
+        "appearance": "worker_icon_2101"
+    },
+    "50110": {
+        "id": "50110",
+        "appearance_id": "21204",
+        "appearance": "worker_icon_1204"
+    },
+    "50109": {
+        "id": "50109",
+        "appearance_id": "21204",
+        "appearance": "worker_icon_1204"
+    },
+    "10102": {
+        "id": "10102",
+        "appearance_id": "22206",
+        "appearance": "worker_icon_2206"
+    },
+    "31701": {
+        "id": "31701",
+        "appearance_id": "22107",
+        "appearance": "worker_icon_2107"
+    },
+    "31702": {
+        "id": "31702",
+        "appearance_id": "22506",
+        "appearance": "worker_icon_2506"
+    },
+    "53207": {
+        "id": "53207",
+        "appearance_id": "22408",
+        "appearance": "worker_icon_2408"
+    },
+    "53208": {
+        "id": "53208",
+        "appearance_id": "22306",
+        "appearance": "worker_icon_2306"
+    },
+    "53209": {
+        "id": "53209",
+        "appearance_id": "21101",
+        "appearance": "worker_icon_1101"
+    },
+    "53210": {
+        "id": "53210",
+        "appearance_id": "21502",
+        "appearance": "worker_icon_1502"
+    },
+    "10203": {
+        "id": "10203",
+        "appearance_id": "21203",
+        "appearance": "worker_icon_1203"
+    },
+    "10204": {
+        "id": "10204",
+        "appearance_id": "21204",
+        "appearance": "worker_icon_1204"
+    },
+    "52613": {
+        "id": "52613",
+        "appearance_id": "21201",
+        "appearance": "worker_icon_1201"
+    },
+    "22606": {
+        "id": "22606",
+        "appearance_id": "22502",
+        "appearance": "worker_icon_2502"
+    },
+    "22605": {
+        "id": "22605",
+        "appearance_id": "22504",
+        "appearance": "worker_icon_2504"
+    },
+    "50320": {
+        "id": "50320",
+        "appearance_id": "22305",
+        "appearance": "worker_icon_2305"
+    },
+    "50321": {
+        "id": "50321",
+        "appearance_id": "21103",
+        "appearance": "worker_icon_1103"
+    },
+    "50322": {
+        "id": "50322",
+        "appearance_id": "21106",
+        "appearance": "worker_icon_1106"
+    },
+    "11401": {
+        "id": "11401",
+        "appearance_id": "22306",
+        "appearance": "worker_icon_2306"
+    },
+    "50518": {
+        "id": "50518",
+        "appearance_id": "21106",
+        "appearance": "worker_icon_1106"
+    },
+    "50517": {
+        "id": "50517",
+        "appearance_id": "21103",
+        "appearance": "worker_icon_1103"
+    },
+    "50516": {
+        "id": "50516",
+        "appearance_id": "22304",
+        "appearance": "worker_icon_2304"
+    },
+    "50515": {
+        "id": "50515",
+        "appearance_id": "22204",
+        "appearance": "worker_icon_2204"
+    },
+    "50514": {
+        "id": "50514",
+        "appearance_id": "21103",
+        "appearance": "worker_icon_1103"
+    },
+    "52201": {
+        "id": "52201",
+        "appearance_id": "21507",
+        "appearance": "worker_icon_1507"
+    },
+    "52202": {
+        "id": "52202",
+        "appearance_id": "21402",
+        "appearance": "worker_icon_1402"
+    },
+    "50513": {
+        "id": "50513",
+        "appearance_id": "21103",
+        "appearance": "worker_icon_1103"
+    },
+    "50510": {
+        "id": "50510",
+        "appearance_id": "21103",
+        "appearance": "worker_icon_1103"
+    },
+    "50509": {
+        "id": "50509",
+        "appearance_id": "21103",
+        "appearance": "worker_icon_1103"
+    },
+    "30510": {
+        "id": "30510",
+        "appearance_id": "22102",
+        "appearance": "worker_icon_2102"
+    },
+    "30509": {
+        "id": "30509",
+        "appearance_id": "22204",
+        "appearance": "worker_icon_2204"
+    },
+    "50610": {
+        "id": "50610",
+        "appearance_id": "21305",
+        "appearance": "worker_icon_1305"
+    },
+    "52209": {
+        "id": "52209",
+        "appearance_id": "22107",
+        "appearance": "worker_icon_2107"
+    },
+    "52210": {
+        "id": "52210",
+        "appearance_id": "22103",
+        "appearance": "worker_icon_2103"
+    },
+    "50609": {
+        "id": "50609",
+        "appearance_id": "21101",
+        "appearance": "worker_icon_1101"
+    },
+    "30610": {
+        "id": "30610",
+        "appearance_id": "22201",
+        "appearance": "worker_icon_2201"
+    },
+    "13301": {
+        "id": "13301",
+        "appearance_id": "21001",
+        "appearance": "worker_icon_21001"
+    },
+    "13302": {
+        "id": "13302",
+        "appearance_id": "22306",
+        "appearance": "worker_icon_2306"
+    },
+    "13303": {
+        "id": "13303",
+        "appearance_id": "21509",
+        "appearance": "worker_icon_13303"
+    },
+    "13304": {
+        "id": "13304",
+        "appearance_id": "21510",
+        "appearance": "worker_icon_13304"
+    },
+    "11403": {
+        "id": "11403",
+        "appearance_id": "21404",
+        "appearance": "worker_icon_1404"
+    },
+    "11402": {
+        "id": "11402",
+        "appearance_id": "22308",
+        "appearance": "worker_icon_2308"
+    },
+    "43003": {
+        "id": "43003",
+        "appearance_id": "22503",
+        "appearance": "worker_icon_2503"
+    },
+    "43004": {
+        "id": "43004",
+        "appearance_id": "22505",
+        "appearance": "worker_icon_2505"
+    },
+    "43005": {
+        "id": "43005",
+        "appearance_id": "21306",
+        "appearance": "worker_icon_1306"
+    },
+    "43006": {
+        "id": "43006",
+        "appearance_id": "21101",
+        "appearance": "worker_icon_1101"
+    },
+    "50319": {
+        "id": "50319",
+        "appearance_id": "22304",
+        "appearance": "worker_icon_2304"
+    }
+}

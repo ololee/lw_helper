@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>幸存者图鉴库</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="搜索幸存者...">
+        <button id="filter-button">筛选</button>
+    </div>
+    <div class="worker-list"></div>
+    <script>
+        showHeroDetails = function(workerId){
+             fetch(`/worker/${workerId}`)
+            .then(response => response.json())
+            .then(data => {
+               console.log(data);
+            });
+        }
+
+        renderWorkers = function(workers) { 
+            const workerList = document.querySelector('.worker-list');
+            workerList.innerHTML = '';
+            workers.forEach(worker => {
+            const workerCard = document.createElement('div');
+            workerCard.className = 'worker-card';
+            workerCard.style.backgroundColor = worker.background_color;
+            workerCard.innerHTML = `
+                <div class="worker-card" style="background-color: ${worker.background_color}">
+                    <p class="worker-id">${worker.id}</p>
+                    <button class="info-button" onclick="showHeroDetails('${worker.id}')">
+                        <img src="/static/info/info.png"  style="width: 20px; height: 20px; filter: hue-rotate(90deg);">
+                    </button>
+                    <img src="/static/icons/${worker.icon}" alt="${worker.name}" class="worker-icon">
+                    <h3 class="worker-name">${worker.name}</h3>
+                    <p class="worker-class">${worker.class}</p>
+                </div>
+            `;
+            workerList.appendChild(workerCard);
+            });
+        }
+
+        window.onload = function() {
+            fetch('/workers')
+            .then(response => {
+                if (!response.ok) {
+                throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(workers => {
+                renderWorkers(workers);
+            })
+            .catch(error => {
+                console.error('获取幸存者列表时出错:', error);
+            });
+
+            const searchInput = document.getElementById('search-input');
+                const filterButton = document.getElementById('filter-button'); // 假设筛选按钮的 id 是 filter-button
+                if (filterButton) {
+                filterButton.addEventListener('click', function() {
+                    console.log(searchInput.value);
+                    fetch(`/filter?workerId=${searchInput.value}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        renderWorkers(data);
+                    });
+                });
+            }
+        }
+    </script>
+</body>
+</html>
