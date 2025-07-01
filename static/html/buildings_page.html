@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>建筑图鉴库</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="搜索建筑...">
+        <button id="filter-button">筛选</button>
+    </div>
+    <div class="building-list"></div>
+    <script>
+        showHeroDetails = function(buildingId){
+             fetch(`/building/${buildingId}`)
+            .then(response => response.json())
+            .then(data => {
+               console.log(data);
+            });
+        }
+
+        renderBuildings = function(buildings) { 
+            const buildingList = document.querySelector('.building-list');
+            buildingList.innerHTML = '';
+            buildings.forEach(building => {
+            const buildingCard = document.createElement('div');
+            buildingCard.className = 'building-card';
+            buildingCard.style.backgroundColor = building.background_color;
+            buildingCard.innerHTML = `
+                <div class="building-card">
+                    <p class="building-id">${building.id}</p>
+                    <button class="info-button" onclick="showHeroDetails('${building.id}')">
+                          <img src="/static/info/info.png"  style="width: 20px; height: 20px; filter: hue-rotate(90deg);">
+                    </button>
+                    <img src="/static/icons/${building.icon}.png" alt="${building.name}" class="building-icon">
+                   <p>${building.name}</p>
+            `;
+            buildingList.appendChild(buildingCard);
+            });
+        }
+
+        window.onload = function() {
+            fetch('/buildings/all')
+            .then(response => {
+                if (!response.ok) {
+                throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(buildings => {
+                renderBuildings(buildings);
+            })
+            .catch(error => {
+                console.error('获取建筑列表时出错:', error);
+            });
+            const colorSelect = document.getElementById('color-select');
+            const jobSelect = document.getElementById('job-select');
+            colorSelect.addEventListener('change', function() {
+                        const selectedValue = this.value;
+                        colorSelect.selectedQuality = selectedValue;
+                        console.log('选中的值是: ', selectedValue);
+                    });
+            jobSelect.addEventListener('change', function() {
+                        const selectedValue = this.value;
+                        jobSelect.selectedQuality = selectedValue;
+                        console.log('选中的值是: ', selectedValue);
+                    });
+            const searchInput = document.getElementById('search-input');
+                const filterButton = document.getElementById('filter-button'); // 假设筛选按钮的 id 是 filter-button
+                if (filterButton) {
+                filterButton.addEventListener('click', function() {
+                    fetch(`/filter?buildingId=${searchInput.value}&quality=${colorSelect.value}&job=${jobSelect.value}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        renderBuildings(data);
+                    });
+                });
+            }
+        }
+    </script>
+</body>
+</html>

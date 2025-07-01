@@ -18,6 +18,13 @@ h1 {
     padding: 20px;
 }
 
+.building-list {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
 .info-button {
     position: absolute;
     top: 5px;
@@ -36,7 +43,21 @@ h1 {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     padding: 5px;
     text-align: center;
+}
+
+.building-card {
     position: relative;
+    background-color: rgb(216, 216, 216);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 5px;
+    text-align: center;
+}
+
+.no-wrap {
+    white-space: nowrap;
+    overflow: hidden; /* 防止内容溢出容器 */
+    text-overflow: ellipsis; /* 超出部分显示省略号 */
 }
 
 .worker-name {
@@ -68,4 +89,27 @@ h1 {
     margin: 0;
     padding: 0;
     text-align: left;
+}
+
+.worker-fragId {
+    color: red;
+    position: absolute;
+    font-size: 12px;
+    top: 5px;
+    left: 5px;
+    z-index: 3;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, 93%);
+}
+
+
+.building-icon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 4px;
 }

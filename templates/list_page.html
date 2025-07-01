@@ -9,6 +9,35 @@
 <body>
     <div class="search-container">
         <input type="text" id="search-input" placeholder="搜索幸存者...">
+        <select id="color-select">
+            <option value="-1">所有</option>
+            <option value="5">橙</option>
+            <option value="4">紫</option>
+            <option value="3">蓝</option>
+            <option value="2">绿</option>
+            <option value="1">白</option>
+        </select>
+        <select id="job-select">
+            <option value="-1">所有</option>
+            <option value="worker_type_4">军官</option>
+            <option value="440000">农民</option>
+            <option value="440016">建筑工</option>
+            <option value="440008">律师</option>
+            <option value="440013">战术顾问</option>
+            <option value="440006">护士</option>
+            <option value="worker_type_5">掘金者</option>
+            <option value="440005">教官</option>
+            <option value="440017">服务员</option>
+            <option value="440004">机修工</option>
+            <option value="440010">猎人</option>
+            <option value="440001">矿工</option>
+            <option value="440018">科学家</option>
+             <option value="worker_type_2">粮仓管理员</option>
+            <option value="440009">警察</option>
+            <option value="金库管理员">金库管理员</option>
+            <option value="worker_type_3">铁库管理员</option>
+            <option value="440007">领航员</option>
+        </select>
         <button id="filter-button">筛选</button>
     </div>
     <div class="worker-list"></div>
@@ -35,16 +64,16 @@
                         <img src="/static/info/info.png"  style="width: 20px; height: 20px; filter: hue-rotate(90deg);">
                     </button>
                     <img src="/static/icons/${worker.icon}" alt="${worker.name}" class="worker-icon">
-                    <h3 class="worker-name">${worker.name}</h3>
+                    <h3 class="worker-name no-wrap">${worker.name}</h3>
                     <p class="worker-class">${worker.class}</p>
-                </div>
+                    <p class="worker-fragId no-wrap">${worker.frag_id}→${worker.frag_count}</p>
             `;
             workerList.appendChild(workerCard);
             });
         }
 
         window.onload = function() {
-            fetch('/workers')
+            fetch('/workers/all')
             .then(response => {
                 if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -57,13 +86,23 @@
             .catch(error => {
                 console.error('获取幸存者列表时出错:', error);
             });
-
+            const colorSelect = document.getElementById('color-select');
+            const jobSelect = document.getElementById('job-select');
+            colorSelect.addEventListener('change', function() {
+                        const selectedValue = this.value;
+                        colorSelect.selectedQuality = selectedValue;
+                        console.log('选中的值是: ', selectedValue);
+                    });
+            jobSelect.addEventListener('change', function() {
+                        const selectedValue = this.value;
+                        jobSelect.selectedQuality = selectedValue;
+                        console.log('选中的值是: ', selectedValue);
+                    });
             const searchInput = document.getElementById('search-input');
                 const filterButton = document.getElementById('filter-button'); // 假设筛选按钮的 id 是 filter-button
                 if (filterButton) {
                 filterButton.addEventListener('click', function() {
-                    console.log(searchInput.value);
-                    fetch(`/filter?workerId=${searchInput.value}`)
+                    fetch(`/filter?workerId=${searchInput.value}&quality=${colorSelect.value}&job=${jobSelect.value}`)
                     .then(response => {
                         if (!response.ok) {
                             throw new Error('Network response was not ok');
