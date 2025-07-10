@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<tns:database xmlns:tns="http://www.iw.com/sns/platform/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ItemSpec id="200020001" accept1="" accept2="10100000" default="1" type1="1" type2="327" para1="[&quot;1&quot;]" para2="1" reward="102021800"/>
+	<ItemSpec id="1000129" accept1="" accept2="10100099" type1="1" type2="0" para1="[&quot;10100000&quot;]" para2="2" reward="102010102"/>
+	<ItemSpec accept2="10100099" type1="1" type2="0" para1="[&quot;10113000&quot;]" para2="1" reward="102010101" id="1000130"/>
+	<ItemSpec accept2="10100099" type1="1" type2="0" para1="[&quot;10210000&quot;]" para2="1" reward="102010101" id="1000131"/>
+	<ItemSpec accept2="10100099" type1="1" type2="311" para1="[&quot;10201000&quot;]" para2="1" para3="1" reward="102010101" id="1000132"/>
+	<ItemSpec accept2="10100099" type1="1" type2="311" para1="[&quot;10202000&quot;]" para2="1" para3="1" reward="102010101" id="1000133"/>
+	<ItemSpec accept2="10100099" type1="1" type2="311" para1="[&quot;10107000&quot;]" para2="1" para3="1" reward="102010101" id="1000134"/>
+	<ItemSpec accept2="10100099" type1="1" type2="21" para1="[]" para2="1" reward="102010101" id="1000135"/>
+	<ItemSpec accept2="10100099" type1="1" type2="327" para1="[&quot;2&quot;]" para2="1" reward="102010101" id="1000136"/>
+	<ItemSpec accept2="10100099" type1="1" type2="59" para1="[&quot;5&quot;]" para2="1" reward="102010601" id="1000137"/>
+	<ItemSpec accept2="10100099" type1="1" type2="327" para1="[&quot;3&quot;]" para2="1" reward="102010101" id="1000138"/>
+	<ItemSpec accept2="10100099" type1="1" type2="327" para1="[&quot;4&quot;]" para2="1" reward="102010101" id="1000139"/>
+	<ItemSpec accept2="10100099" type1="1" type2="327" para1="[&quot;5&quot;]" para2="1" reward="102010101" id="1000140"/>
+	<ItemSpec accept2="10100099" type1="1" type2="327" para1="[&quot;6&quot;]" para2="1" reward="102010101" id="1000141"/>
+	<ItemSpec accept2="10100099" type1="1" type2="327" para1="[&quot;7&quot;]" para2="1" reward="102010101" id="1000142"/>
+	<ItemSpec accept2="10100099" type1="1" type2="59" para1="[&quot;5&quot;]" para2="2" reward="102011201" id="1000143"/>
+	<ItemSpec accept2="10100099" type1="1" type2="327" para1="[&quot;8&quot;]" para2="1" reward="102010101" id="1000144"/>
+	<ItemSpec accept2="10100099" type1="1" type2="240" para1="[&quot;5&quot;]" para2="1" reward="102010101" id="1000145"/>
+	<ItemSpec accept2="10100099" type1="1" type2="0" para1="[&quot;10115000&quot;]" para2="1" reward="102010101" id="1000146"/>
+	<ItemSpec accept2="10100099" type1="1" type2="311" para1="[&quot;10120000&quot;]" para2="1" para3="0" reward="102010101" id="1000147"/>
+	<ItemSpec accept2="10100099" type1="1" type2="63" para1="[]" para2="1" reward="102010101" id="1000148"/>
+	<ItemSpec accept2="10100099" type1="1" type2="66" para1="[&quot;4&quot;]" para2="4" reward="102010101" id="1000149"/>
+	<ItemSpec accept2="10100099" type1="1" type2="311" para1="[&quot;10100000&quot;]" para2="1" para3="2" reward="102010202" id="1000150"/>
+	<ItemSpec accept2="10100099" type1="1" type2="59" para1="[&quot;5&quot;]" para2="3" reward="102011201" id="1000151"/>
+	<ItemSpec accept2="10100099" type1="1" type2="327" para1="[&quot;9&quot;]" para2="1" reward="102010101" id="1000152"/>
+	<ItemSpec accept2="10100099" type1="1" type2="327" para1="[&quot;10&quot;]" para2="1" reward="102010101" id="1000153"/>
+	<ItemSpec accept2="10100099" type1="1" type2="327" para1="[&quot;11&quot;]" para2="1" reward="102010101" id="1000154"/>
+	<ItemSpec accept2="10100099" type1="1" type2="327" para1="[&quot;12&quot;]" para2="1" reward="102010101" id="1000155"/>
+	<ItemSpec accept2="10100099" type1="1" type2="0" para1="[&quot;10114000&quot;]" para2="1" reward="102010101" id="1000156"/>
+	<ItemSpec accept2="10100099" type1="1" type2="0" para1="[&quot;10124000&quot;]" para2="1" reward="102010101" id="1000157"/>
+	<ItemSpec accept2="10100099" type1="1" type2="212" para1="[]" para2="1" reward="102010101" id="1000158"/>
+	<ItemSpec accept2="10100099" type1="1" type2="212" para1="[]" para2="3" reward="102010101" id="1000159"/>
+	<ItemSpec accept2="10100000" type1="1" type2="311" para1="[&quot;10100000&quot;]" para2="1" para3="3" reward="102010302" id="1000160"/>
+	<ItemSpec accept2="10100099" type1="1" type2="327" para1="[&quot;13&quot;]" para2="1" reward="102010101" id="1000161"/>
+	<ItemSpec accept2="10100099" type1="1" type2="240" para1="[&quot;6&quot;]" para2="1" reward="102010101" id="1000162"/>
+	<ItemSpec id="300101002" accept1="" accept2="10100009" default="1" type1="1" type2="311" para1="[&quot;10101000&quot;]" para2="1" para3="1" reward="102020002"/>
+	<ItemSpec accept2="10100009" type1="1" type2="311" para1="[&quot;10101000&quot;]" para2="1" para3="2" reward="102020002" pre="300101002" id="300101003"/>
+	<ItemSpec accept2="10100009" type1="1" type2="311" para1="[&quot;10101000&quot;]" para2="1" para3="3" reward="102020002" pre="300101003" id="300101004"/>
+	<ItemSpec accept2="10100009" type1="1" type2="311" para1="[&quot;10101000&quot;]" para2="1" para3="4" reward="102020002" pre="300101004" id="300101005"/>
+	<ItemSpec accept2="10100009" type1="1" type2="311" para1="[&quot;10101000&quot;]" para2="1" para3="5" reward="102020002" pre="300101005" id="300101006"/>
+	<ItemSpec accept2="10100009" type1="1" type2="311" para1="[&quot;10101000&quot;]" para2="1" para3="6" reward="102020000" pre="300101006" id="300101007"/>
+	<ItemSpec accept2="10100009" type1="1" type2="311" para1="[&quot;10101000&quot;]" para2="1" para3="7" reward="102020000" pre="300101007" id="300101008"/>
+	<ItemSpec accept2="10100009" type1="1" type2="311" para1="[&quot;10101000&quot;]" para2="1" para3="8" reward="102020000" pre="300101008" id="300101009"/>
+	<ItemSpec accept2="10100010" type1="1" type2="311" para1="[&quot;10101000&quot;]" para2="1" para3="9" reward="102020000" pre="300101009" id="300101010"/>
+	<ItemSpec accept2="10100011" type1="1" type2="311" para1="[&quot;10101000&quot;]" para2="1" para3="10" reward="102020000" pre="300101010" id="300101011"/>
+	<ItemSpec accept2="10100012" type1="1" type2="311" para1="[&quot;10101000&quot;]" para2="1" para3="11" reward="102020000" pre="300101011" id="300101012"/>
+	<ItemSpec accept2="10100013" type1="1" type2="311" para1="[&quot;10101000&quot;]" para2="1" para3="12" reward="102020000" pre="300101012" id="300101013"/>
+	<ItemSpec accept2="10100014" type1="1" type2="311" para1="[&quot;10101000&quot;]" para2="1" para3="13" reward="102020000" pre="300101013" id="300101014"/>
+	<ItemSpec accept2="10100035" type1="1" type2="311" para1="[&quot;10101000&quot;]" para2="1" para3="34" reward="102020000" pre="300101034" id="300101035"/>
+	<ItemSpec accept2="10100034" type1="1" type2="311" para1="[&quot;10101000&quot;]" para2="1" para3="33" reward="102020000" pre="300101033" id="300101034"/>
+	<ItemSpec accept2="10100033" type1="1" type2="311" para1="[&quot;10101000&quot;]" para2="1" para3="32" reward="102020000" pre="300101032" id="300101033"/>
+	<ItemSpec accept2="10100032" type1="1" type2="311" para1="[&quot;10101000&quot;]" para2="1" para3="31" reward="102020000" pre="300101031" id="300101032"/>
+	<ItemSpec accept2="10100031" type1="1" type2="311" para1="[&quot;10101000&quot;]" para2="1" para3="30" reward="102020000" pre="300101030" id="300101031"/>
+	<ItemSpec accept2="10100030" type1="1" type2="311" para1="[&quot;10101000&quot;]" para2="1" para3="29" reward="102020000" pre="300101029" id="300101030"/>
+	<ItemSpec accept2="10100029" type1="1" type2="311" para1="[&quot;10101000&quot;]" para2="1" para3="28" reward="102020000" pre="300101028" id="300101029"/>
+	<ItemSpec accept2="10100028" type1="1" type2="311" para1="[&quot;10101000&quot;]" para2="1" para3="27" reward="102020000" pre="300101027" id="300101028"/>
+	<ItemSpec accept2="10100027" type1="1" type2="311" para1="[&quot;10101000&quot;]" para2="1" para3="26" reward="102020000" pre="300101026" id="300101027"/>
+	<ItemSpec accept2="10100026" type1="1" type2="311" para1="[&quot;10101000&quot;]" para2="1" para3="25" reward="102020000" pre="300101025" id="300101026"/>
+	<ItemSpec accept2="10100025" type1="1" type2="311" para1="[&quot;10101000&quot;]" para2="1" para3="24" reward="102020000" pre="300101024" id="300101025"/>
+	<ItemSpec accept2="10100024" type1="1" type2="311" para1="[&quot;10101000&quot;]" para2="1" para3="23" reward="102020000" pre="300101023" id="300101024"/>
+	<ItemSpec accept2="10100023" type1="1" type2="311" para1="[&quot;10101000&quot;]" para2="1" para3="22" reward="102020000" pre="300101022" id="300101023"/>
+	<ItemSpec accept2="10100022" type1="1" type2="311" para1="[&quot;10101000&quot;]" para2="1" para3="21" reward="102020000" pre="300101021" id="300101022"/>
+	<ItemSpec accept2="10100021" type1="1" type2="311" para1="[&quot;10101000&quot;]" para2="1" para3="20" reward="102020000" pre="300101020" id="300101021"/>
+	<ItemSpec accept2="10100020" type1="1" type2="311" para1="[&quot;10101000&quot;]" para2="1" para3="19" reward="102020000" pre="300101019" id="300101020"/>
+	<ItemSpec accept2="10100019" type1="1" type2="311" para1="[&quot;10101000&quot;]" para2="1" para3="18" reward="102020000" pre="300101018" id="300101019"/>
+	<ItemSpec accept2="10100018" type1="1" type2="311" para1="[&quot;10101000&quot;]" para2="1" para3="17" reward="102020000" pre="300101017" id="300101018"/>
+	<ItemSpec accept2="10100017" type1="1" type2="311" para1="[&quot;10101000&quot;]" para2="1" para3="16" reward="102020000" pre="300101016" id="300101017"/>
+	<ItemSpec accept2="10100016" type1="1" type2="311" para1="[&quot;10101000&quot;]" para2="1" para3="15" reward="102020000" pre="300101015" id="300101016"/>
+	<ItemSpec accept2="10100015" type1="1" type2="311" para1="[&quot;10101000&quot;]" para2="1" para3="14" reward="102020000" pre="300101014" id="300101015"/>
+</tns:database>

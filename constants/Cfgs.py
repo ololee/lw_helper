@@ -6,6 +6,10 @@ class ConfigType:
     building_trans = "building_trans"
     army_cfgs = "army_cfgs"
     army_trans = "army_trans"
+    quest_cfgs = "quest_cfgs"
+    quest_trans = "quest_trans"
+    hero_trans = "hero_trans"
+    hero_cfgs = "hero_cfgs"
 
 
 config_files = {
@@ -15,5 +19,9 @@ config_files = {
     ConfigType.building_cfgs: "./static/config/csv/building.csv",
     ConfigType.building_trans: "./static/config/json/building_trans.json",
     ConfigType.army_cfgs : "./static/config/csv/lw_army.csv",
-    ConfigType.army_trans : "./static/config/json/army_trans.json"
+    ConfigType.army_trans : "./static/config/json/army_trans.json",
+    ConfigType.quest_cfgs : "./static/config/csv/quest.csv",
+    ConfigType.quest_trans : "./static/config/json/quest_trans.json",
+    ConfigType.hero_cfgs : "./static/config/csv/lw_hero.csv",
+    ConfigType.hero_trans : "./static/config/json/hero_trans.json",
 }

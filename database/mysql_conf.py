@@ -3,5 +3,6 @@ LOCAL_CONF = {
     "user": "root",
     "port": 3306,
     "password": "abcd1234",
-    "database": "lowdb1"
+    "database": "lowdb1",
+    "local_sql":rf"D:\workspace\LastWar\Develop\SQL\lowdb.sql"
 }

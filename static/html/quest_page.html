@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主线任务列表</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="搜索任务...">
+        <button id="filter-button">筛选</button>
+    </div>
+    <div class="quest-list"></div>
+    <script>
+        showHeroDetails = function(questId){
+             fetch(`/quest/${questId}`)
+            .then(response => response.json())
+            .then(data => {
+               console.log(data);
+            });
+        }
+
+        renderQuests = function(quests) {
+            const questList = document.querySelector('.quest-list');
+            questList.innerHTML = '';
+            quests.forEach(quest => {
+            const questCard = document.createElement('div');
+            questCard.className = 'quest-card';
+            questCard.style.backgroundColor = quest.background_color;
+            questCard.innerHTML = `
+                <div class="quest-card">
+                    <p class="quest-id">${quest.id}</p>
+                    <button class="info-button" onclick="showHeroDetails('${quest.id}')">
+                          <img src="/static/info/info.png"  style="width: 20px; height: 20px; filter: hue-rotate(90deg);">
+                    </button>
+                   <!-- <img src="/static/icons/${quest.icon}.png" alt="${quest.name}" class="quest-icon">-->
+                   <p>${quest.name}</p>
+                   <p class="desc_trans">${quest.desc}</p>
+            `;
+            questList.appendChild(questCard);
+            });
+        }
+
+        window.onload = function() {
+            fetch('/quest/all')
+            .then(response => {
+                if (!response.ok) {
+                throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(quests => {
+                renderQuests(quests);
+            })
+            .catch(error => {
+                console.error('获取任务列表时出错:', error);
+            });
+            const colorSelect = document.getElementById('color-select');
+            const jobSelect = document.getElementById('job-select');
+            colorSelect.addEventListener('change', function() {
+                        const selectedValue = this.value;
+                        colorSelect.selectedQuality = selectedValue;
+                        console.log('选中的值是: ', selectedValue);
+                    });
+            jobSelect.addEventListener('change', function() {
+                        const selectedValue = this.value;
+                        jobSelect.selectedQuality = selectedValue;
+                        console.log('选中的值是: ', selectedValue);
+                    });
+            const searchInput = document.getElementById('search-input');
+                const filterButton = document.getElementById('filter-button'); // 假设筛选按钮的 id 是 filter-button
+                if (filterButton) {
+                filterButton.addEventListener('click', function() {
+                    fetch(`/filter?questId=${searchInput.value}&quality=${colorSelect.value}&job=${jobSelect.value}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        renderQuests(data);
+                    });
+                });
+            }
+        }
+    </script>
+</body>
+</html>

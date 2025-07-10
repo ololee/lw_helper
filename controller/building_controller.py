@@ -32,3 +32,11 @@ class BuildingController:
                 "icon":rf"buildings/{building_list[0]["pic"]}"
             })
         return renderer_list
+
+    def getById(self,id):
+        ret = {}
+        for cfg in self.building_cfgs:
+            if cfg["id"] == id:
+                ret = cfg
+                break
+        return ret
