@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英雄图鉴库</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="搜索英雄...">
+        <select id="color-select">
+            <option value="-1">所有品质</option>
+            <option value="5">橙</option>
+            <option value="4">紫</option>
+            <option value="3">蓝</option>
+            <option value="2">绿</option>
+            <option value="1">白</option>
+        </select>
+        <select id="human-select">
+            <option value="-1">所有人</option>
+            <option value="1">人类</option>
+            <option value="0">非人类</option>
+        </select>
+         <select id="list-select">
+            <option value="-1">展示所有</option>
+            <option value="1">仅列表</option>
+        </select>
+        <button id="filter-button">筛选</button>
+    </div>
+    <div class="hero-list"></div>
+    <script>
+        showHeroDetails = function(heroId){
+             fetch(`/hero/${heroId}`)
+            .then(response => response.json())
+            .then(data => {
+               console.log(data);
+            });
+        }
+
+        renderWorkers = function(heros) { 
+            const heroList = document.querySelector('.hero-list');
+            heroList.innerHTML = '';
+            heros.forEach(hero => {
+                const heroCard = document.createElement('div');
+                heroCard.className = 'worker-card';
+                heroCard.style.backgroundColor = hero.background_color;
+                heroCard.innerHTML = `
+                    <div class="worker-card" style="background-color: ${hero.background_color}">
+                        <p class="hero-id">${hero.id}</p>
+                        <button class="info-button" onclick="showHeroDetails('${hero.id}')">
+                            <img src="/static/info/info.png"  style="width: 20px; height: 20px; filter: hue-rotate(90deg);">
+                        </button>
+                        <img src="/static/icons/${hero.icon}" alt="${hero.name}" class="worker-icon">
+                        <h3 class="worker-name no-wrap">${hero.name}</h3>
+                        <!--<p class="worker-class">${hero.class}</p>
+                        <p class="worker-fragId no-wrap">${hero.frag_id}→${hero.frag_count}</p> -->
+                `;
+                heroList.appendChild(heroCard);
+            });
+        }
+
+        window.onload = function() {
+            fetch('/heros/all')
+            .then(response => {
+                if (!response.ok) {
+                throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(heros => {
+                renderWorkers(heros);
+            })
+            .catch(error => {
+                console.error('获取英雄列表时出错:', error);
+            });
+            const colorSelect = document.getElementById('color-select');
+            const humanSelect = document.getElementById('human-select');
+            const listSelect = document.getElementById('list-select');
+            colorSelect.addEventListener('change', function() {
+                        const selectedValue = this.value;
+                        colorSelect.selectedQuality = selectedValue;
+                    });
+            humanSelect.addEventListener('change', function() {
+                        const selectedValue = this.value;
+                        humanSelect.selectedQuality = selectedValue;
+                    });
+            listSelect.addEventListener('change', function() {
+                const selectedValue = this.value;
+                listSelect.selectedQuality = selectedValue;
+            });
+            const searchInput = document.getElementById('search-input');
+                const filterButton = document.getElementById('filter-button'); // 假设筛选按钮的 id 是 filter-button
+                if (filterButton) {
+                filterButton.addEventListener('click', function() {
+                    fetch(`/hero_filter?heroId=${searchInput.value}&quality=${colorSelect.value}&isHuman=${humanSelect.value}&onlyList=${listSelect.value}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        renderWorkers(data);
+                    });
+                });
+            }
+        }
+    </script>
+</body>
+</html>

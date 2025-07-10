@@ -6,6 +6,7 @@ from controller.building_controller import BuildingController
 from controller.quest_controller import QuestController
 from controller.worker_controller import WorkerController
 from controller.army_controller import ArmyController
+from controller.hero_controller import HeroController
 import json 
 from flask import send_from_directory
 from database.MysqlConnector import MysqlConnector
@@ -77,13 +78,27 @@ def filter():
 
 @app.route('/workers')
 def serve_list_page():
-    return send_from_directory('static', 'html/list_page.html')
+    return send_from_directory('static', 'html/worker_page.html')
 
+@app.route('/heros/all')
+def all_heros():
+    hc = HeroController()
+    return json.dumps(hc.getAll(),ensure_ascii=False,indent=4), 200, {'Content-Type': 'application/json'}
 
 @app.route('/heros')
 def heros_page():
-    return send_from_directory('static', 'html/heros_page.html')
+    return send_from_directory('static', 'html/hero_page.html')
 
+
+@ignore_route
+@app.route('/hero_filter')
+def hero_filter():
+    heroId = request.args.get('heroId')
+    quality = request.args.get('quality')
+    isHuman = request.args.get('isHuman')
+    onlyList = request.args.get('onlyList')
+    heros = HeroController().filter(heroId,int(quality),isHuman,onlyList)
+    return json.dumps(heros), 200, {'Content-Type': 'application/json'}
 @app.route('/buildings')
 def buildings_page():
     return send_from_directory('static/html', 'buildings_page.html')

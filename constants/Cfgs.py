@@ -10,6 +10,7 @@ class ConfigType:
     quest_trans = "quest_trans"
     hero_trans = "hero_trans"
     hero_cfgs = "hero_cfgs"
+    hero_appearance_cfgs = "hero_appearance_cfgs"
 
 
 config_files = {
@@ -24,4 +25,5 @@ config_files = {
     ConfigType.quest_trans : "./static/config/json/quest_trans.json",
     ConfigType.hero_cfgs : "./static/config/csv/lw_hero.csv",
     ConfigType.hero_trans : "./static/config/json/hero_trans.json",
+    ConfigType.hero_appearance_cfgs : "./static/config/csv/lw_hero_appearance.csv"
 }
