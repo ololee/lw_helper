@@ -4,10 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>导航首页</title>
+    <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
     <h1>API 导航</h1>
-    <ul>
-        <li><a href=/workers/all>/workers/all</a></li>        <li><a href=/buildings/all>/buildings/all</a></li>        <li><a href=/army/all>/army/all</a></li>        <li><a href=/workers>/workers</a></li>        <li><a href=/heros/all>/heros/all</a></li>        <li><a href=/heros>/heros</a></li>        <li><a href=/buildings>/buildings</a></li>        <li><a href=/add_wounded_soldiers>/add_wounded_soldiers</a></li>        <li><a href=/reset_db>/reset_db</a></li>        <li><a href=/quest/all>/quest/all</a></li>        <li><a href=/quest>/quest</a></li>        <li><a href=/quest/chapter>/quest/chapter</a></li>    </ul>
+    <div id="app"></div>
+    <script>
+         fetch(`/app_home`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        let listHtml = '<ul class="nav-list">';
+                        data.forEach(item => {
+                              listHtml += `<li class="nav-item"><a href="${item}" class="nav-link">${item}</a></li>`;
+                        });
+                        listHtml += '</ul>';
+                        document.getElementById('app').innerHTML = listHtml;
+                    });
+    </script>
 </body>
 </html>

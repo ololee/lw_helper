@@ -1,4 +1,4 @@
-from gen import ignore_route
+from gen import ignore_route,routes
 from flask import Flask, request
 from config_reader import read_model_config
 from cache_handler import init_db, save_to_cache, get_from_cache
@@ -7,6 +7,9 @@ from controller.quest_controller import QuestController
 from controller.worker_controller import WorkerController
 from controller.army_controller import ArmyController
 from controller.hero_controller import HeroController
+from controller.skill_controller import SkillController
+from controller.hero_skill_controller import HeroSkillController
+
 import json 
 from flask import send_from_directory
 from database.MysqlConnector import MysqlConnector
@@ -17,6 +20,11 @@ import io
 
 app = Flask(__name__)
 MysqlConnector()
+
+@ignore_route
+@app.route("/app_home")
+def getHomePageData():
+    return routes
 
 @ignore_route
 @app.route('/')
@@ -48,6 +56,18 @@ def list_page():
     workers = wc.getALl()
     return json.dumps(workers), 200, {'Content-Type': 'application/json'}
 
+
+@app.route('/skill/all')
+def all_skills():
+    sc = SkillController()
+    skills = sc.getALl()
+    return json.dumps(skills,ensure_ascii=False,indent=4), 200, {'Content-Type': 'application/json'}
+
+@app.route('/hero_skill/all')
+def all_hero_skills():
+    hsc = HeroSkillController()
+    skills = hsc.getALl()
+    return json.dumps(skills,ensure_ascii=False,indent=4), 200, {'Content-Type': 'application/json'}
 
 @app.route('/buildings/all')
 def all_buildings():
@@ -129,7 +149,9 @@ def get_all_quest():
 def quest():
     return send_from_directory('static/html', 'quest_page.html')
 
-
+@app.route("/decode")
+def decode():
+    return send_from_directory('static/html', 'decode_unicode_strs.html')
 @app.route("/quest/chapter")
 def getAllChapter():
     qc = QuestController()

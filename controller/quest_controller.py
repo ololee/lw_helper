@@ -18,6 +18,7 @@ class QuestController:
             desc_trans = self.quest_trans[desc]
         para1 = cfg["para1"]
         para2 = cfg["para2"]
+        is_chapter = cfg["is_chapter"]
         para1_trans = []
         if para1 != "":
             para1_ev = eval(para1)
@@ -33,7 +34,8 @@ class QuestController:
             "name":trans_name ,
             "pic":"",
             "desc":desc_trans + "--" + json.dumps(para1_trans,ensure_ascii=False),
-            "id":cfg["id"]
+            "id":cfg["id"],
+            "is_chapter":is_chapter
         }
 
     def getAll(self):
