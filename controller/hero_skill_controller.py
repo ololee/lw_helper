@@ -13,9 +13,12 @@ class HeroSkillController:
         name = name_id
         if name_id in self.hero_skill_trans:
             name = self.hero_skill_trans[name_id]
+        icon = skill["icon"]
+        icon = icon.replace("Assets/Main/Sprites/","static/icons/hero_skills/")
         return {
             "id":skill["id"],
-            "name":name
+            "name":name,
+            "icon":icon
         }
     
     def getALl(self):

@@ -9,6 +9,7 @@ from controller.army_controller import ArmyController
 from controller.hero_controller import HeroController
 from controller.skill_controller import SkillController
 from controller.hero_skill_controller import HeroSkillController
+from decompile.decompile import Decompiler
 
 import json 
 from flask import send_from_directory
@@ -20,6 +21,8 @@ import io
 
 app = Flask(__name__)
 MysqlConnector()
+
+
 
 @ignore_route
 @app.route("/app_home")
@@ -109,6 +112,9 @@ def all_heros():
 def heros_page():
     return send_from_directory('static', 'html/hero_page.html')
 
+@app.route('/hero_skills')
+def hero_skills_page():
+    return send_from_directory('static', 'html/hero_skill_page.html')
 
 @ignore_route
 @app.route('/hero_filter')
@@ -152,6 +158,12 @@ def quest():
 @app.route("/decode")
 def decode():
     return send_from_directory('static/html', 'decode_unicode_strs.html')
+
+@app.route("/decompile")
+def compile_page():
+    return send_from_directory('static/html', 'decompile_page.html')
+
+
 @app.route("/quest/chapter")
 def getAllChapter():
     qc = QuestController()

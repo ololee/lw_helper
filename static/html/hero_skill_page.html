@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英雄技能图鉴库</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="搜索技能...">
+        <button id="filter-button">筛选</button>
+    </div>
+    <div class="hero-skill-list"></div>
+    <script>
+        showSkillDetails = function(skillId){
+             fetch(`/hero_skill/${skillId}`)
+            .then(response => response.json())
+            .then(data => {
+               console.log(data);
+            });
+        }
+
+        renderHeroSkills = function(skills) { 
+            const skillList = document.querySelector('.hero-skill-list');
+            skillList.innerHTML = '';
+            skills.forEach(skill => {
+            const skillCard = document.createElement('div');
+            skillCard.className = 'hero-skill-card';
+            skillCard.style.backgroundColor = skill.background_color;
+            skillCard.innerHTML = `
+                <div class="hero-skill-card">
+                    <p class="skill-id">${skill.id}</p>
+                    <button class="info-button" onclick="showSkillDetails('${skill.id}')">
+                          <img src="/static/info/info.png"  style="width: 20px; height: 20px; filter: hue-rotate(90deg);">
+                    </button>
+                    <img src="${skill.icon}" alt="${skill.name}" class="skill-icon">
+                   <p>${skill.name}</p>
+            `;
+            skillList.appendChild(skillCard);
+            });
+        }
+
+        window.onload = function() {
+            fetch('/hero_skill/all')
+            .then(response => {
+                if (!response.ok) {
+                throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(skills => {
+                renderHeroSkills(skills);
+            })
+            .catch(error => {
+                console.error('获取英雄技能列表时出错:', error);
+            });
+
+            const searchInput = document.getElementById('search-input');
+                const filterButton = document.getElementById('filter-button');
+                if (filterButton) {
+                filterButton.addEventListener('click', function() {
+                    fetch(`/filter?skillId=${searchInput.value}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        renderHeroSkills(data);
+                    });
+                });
+            }
+        }
+    </script>
+</body>
+</html>
