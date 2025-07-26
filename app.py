@@ -163,6 +163,11 @@ def decode():
 def compile_page():
     return send_from_directory('static/html', 'decompile_page.html')
 
+@app.route("/get_ls_scripts")
+def get_ls_scripts():
+    decompiler = Decompiler()
+    decompiler.pull_Lw_scripts()
+    return  json.dumps({},ensure_ascii=False,indent=4), 200, {'Content-Type': 'application/json'}
 
 @app.route("/quest/chapter")
 def getAllChapter():
