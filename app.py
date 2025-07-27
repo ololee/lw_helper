@@ -1,5 +1,7 @@
+from pandas.core._numba import executor
+from decompile import decompile
 from gen import ignore_route,routes
-from flask import Flask, request
+from flask import Flask, render_template, request, jsonify
 from config_reader import read_model_config
 from cache_handler import init_db, save_to_cache, get_from_cache
 from controller.building_controller import BuildingController
@@ -10,6 +12,10 @@ from controller.hero_controller import HeroController
 from controller.skill_controller import SkillController
 from controller.hero_skill_controller import HeroSkillController
 from decompile.decompile import Decompiler
+from flask_socketio import SocketIO
+import os
+from concurrent.futures import ThreadPoolExecutor
+from decompile.cmd.CMD_utils import CMD_utils
 
 import json 
 from flask import send_from_directory
@@ -20,8 +26,10 @@ import pandas as pd
 import io
 
 app = Flask(__name__)
+app.config["SECRET_KEY"] = "secret-key"
+socketio = SocketIO(app,cors_allowed_origins="*")
 MysqlConnector()
-
+executor = ThreadPoolExecutor(max_workers=4)
 
 
 @ignore_route
@@ -163,11 +171,138 @@ def decode():
 def compile_page():
     return send_from_directory('static/html', 'decompile_page.html')
 
-@app.route("/get_ls_scripts")
+@ignore_route
+@app.route("/decompile/fetchFiles",methods=["POST"])
 def get_ls_scripts():
     decompiler = Decompiler()
-    decompiler.pull_Lw_scripts()
-    return  json.dumps({},ensure_ascii=False,indent=4), 200, {'Content-Type': 'application/json'}
+    data = request.get_json()
+    task_id = data["taskId"]
+    result = decompiler.pull_Lw_scripts(task_id)
+    return  json.dumps(result,ensure_ascii=False,indent=4), 200, {'Content-Type': 'application/json'}
+
+def progress_callback(idx,name,count):
+    global socketio
+    if idx < count:
+        if idx % 100 == 0:
+            socketio.emit("progress_update", {
+                "taskId":2,
+                "idx": idx,
+                "name": name,
+                "count": count
+            })
+            socketio.sleep(0)
+    else:
+        socketio.emit("progress_update", {
+            "taskId":2,
+            "idx": idx,
+            "name": name,
+            "count": count
+        })
+        socketio.sleep(0)
+
+
+def start_unzipFiles():
+    decompiler = Decompiler()
+    decompiler.unzipFiles(progress_callback)
+
+@ignore_route
+@app.route("/decompile/unzipFiles",methods=["POST"])
+def unzipFiles():
+    data = request.get_json()
+    task_id = data["taskId"]
+    socketio.start_background_task(start_unzipFiles)
+    return  json.dumps({
+        "task_id": task_id,
+        "status": "task_started"
+    },ensure_ascii=False,indent=4), 200, {'Content-Type': 'application/json'}
+
+@ignore_route
+@app.route("/decompile/uploadXLuaC/<name>",methods=["POST"])
+def uploadXLuaC(name):
+    xluac = request.get_data()
+    decompiler = Decompiler()
+    decompiler.castXLuac2Lua(name,xluac)
+    return json.dumps({
+        "task_id": 3,
+        "status": "task_completed"
+    },ensure_ascii=False,indent=4),200, {'Content-Type': 'application/json'}
+
+@ignore_route
+@app.route("/decompile/getExportDir")
+def getExportDir():
+    decompiler = Decompiler()
+    return json.dumps({
+       "path": decompiler.getExportDir()
+    },ensure_ascii=False,indent=4), 200, {'Content-Type': 'application/json'}
+
+@ignore_route
+@app.route("/decompile/decompile",methods=["POST"])
+def decompile():
+    decompiler = Decompiler()
+    return json.dumps(decompiler.decompile(),ensure_ascii=False,indent=4), 200, {'Content-Type': 'application/json'}
+
+
+@ignore_route
+@app.route("/decompile/getCode",methods=["POST"])
+def getCode():
+    data = request.get_json()
+    task_id = data["taskId"]
+    lua_path = None
+    if lua_path in data:
+        lua_path = data["lua_path"]
+    decompiler = Decompiler()
+    code_data = decompiler.getCode(lua_path)
+    return json.dumps(code_data,ensure_ascii=False,indent=4), 200, {'Content-Type': 'application/json'}
+
+
+@ignore_route
+@app.route("/decompile/code/<token>")
+def open_in_webpage(token):
+    decompiler = Decompiler()
+    code_data = decompiler.getCodeByToken(token)
+    return render_template("code_page.html",data=code_data)
+
+@ignore_route
+@app.route('/open-in-vscode', methods=['POST'])
+def open_in_vscode():
+    data = request.get_json()
+    path = data.get('path')
+    if path and os.path.exists(path):
+        # 使用subprocess打开VSCode
+        CMD_utils.execute_cmd(f"code {path}")
+        return jsonify({'success': True})
+    return jsonify({'success': False, 'error': '文件不存在'})
+
+@ignore_route
+@app.route('/save-code', methods=['POST'])
+def save_code():
+    data = request.get_json()
+    path = data.get('path')
+    content = data.get('content')
+    try:
+        with open(path, 'w', encoding='utf-8') as f:
+            f.write(content)
+        return jsonify({'success': True})
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e)})
+
+@ignore_route
+@app.route('/load-code')
+def load_code():
+    path = request.args.get('path')
+    if path and os.path.exists(path):
+        with open(path, 'r', encoding='utf-8') as f:
+            return f.read()
+    return ''
+
+@ignore_route
+@app.route("/decompile/lua2luac",methods=["POST"])
+def lua2luac():
+    decompiler = Decompiler()
+    decompiler.generate_luac()
+    return json.dumps({},ensure_ascii=False,indent=4), 200, {'Content-Type': 'application/json'}
+
+
 
 @app.route("/quest/chapter")
 def getAllChapter():
@@ -181,4 +316,4 @@ def getAllChapter():
 
 if __name__ == '__main__':
     init_db()
-    app.run(debug=True)
+    socketio.run(app,debug=True)

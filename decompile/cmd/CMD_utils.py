@@ -13,7 +13,6 @@ class CMD_utils:
         Returns:
             包含标准输出、标准错误和返回代码的元组
         """
-        print(command)
         try:
             # 创建一个新的进程执行命令
             process = subprocess.Popen(

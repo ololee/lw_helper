@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lua代码编辑器</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/dracula.min.css">
+    <link rel="stylesheet" href="/static/styles.css">
+    <style>
+        .code-editor-container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #f5f5f5;
+            overflow: hidden;
+        }
+
+        .editor-header {
+            background-color: #282a36;
+            color: white;
+            padding: 1rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+
+        .file-path {
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.9rem;
+            color: #8be9fd;
+            margin-bottom: 0.5rem;
+            padding: 0.5rem;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 4px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .toolbar {
+            display: flex;
+            gap: 0.75rem;
+            padding: 0.5rem 0;
+        }
+
+        .toolbar-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background-color: #44475a;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+
+        .toolbar-btn:hover {
+            background-color: #6272a4;
+            transform: translateY(-2px);
+        }
+
+        .toolbar-btn i {
+            font-size: 1rem;
+        }
+
+        .editor-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            overflow: hidden;
+        }
+
+        #code-editor {
+            flex: 1;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+        }
+
+        .CodeMirror {
+            height: 100% !important;
+            font-family: 'Consolas', 'Monaco', monospace;
+        }
+
+        .status-bar {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+            color: #666;
+            background-color: #f0f0f0;
+            border-top: 1px solid #ddd;
+        }
+
+        .version-controls {
+            display: flex;
+            gap: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="code-editor-container">
+        <div class="editor-header">
+            <div class="file-path" id="fileLocation">{{data.path}}</div>
+            <div class="toolbar">
+                <button class="toolbar-btn" id="openInVSCode">
+                    <i class="fas fa-code"></i> 在VS Code中打开
+                </button>
+                <button class="toolbar-btn" id="saveFile">
+                    <i class="fas fa-save"></i> 保存
+                </button>
+                <div class="version-controls">
+                    <button class="toolbar-btn" id="undoBtn">
+                        <i class="fas fa-undo"></i> 撤销
+                    </button>
+                    <button class="toolbar-btn" id="redoBtn">
+                        <i class="fas fa-redo"></i> 重做
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="editor-content">
+            <textarea id="code-editor">{{ data.content|safe }}</textarea>
+        </div>
+        <div class="status-bar">
+            <div id="cursorPosition">行: 1, 列: 1</div>
+            <div>Lua代码编辑器</div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/lua/lua.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/addon/edit/undo.js"></script>
+    <script>
+        // 初始化CodeMirror编辑器
+        const editor = CodeMirror.fromTextArea(document.getElementById('code-editor'), {
+            mode: 'lua',
+            theme: 'dracula',
+            lineNumbers: true,
+            lineWrapping: false,
+            indentUnit: 4,
+            indentWithTabs: true,
+            smartIndent: true,
+            tabSize: 4,
+            historyEventDelay: 100,
+            extraKeys: {
+                'Tab': (cm) => cm.replaceSelection('    ', 'end'),
+                'Shift-Tab': 'indentLess'
+            }
+        });
+
+        // 更新光标位置显示
+        editor.on('cursorActivity', () => {
+            const cursor = editor.getCursor();
+            document.getElementById('cursorPosition').textContent = `行: ${cursor.line + 1}, 列: ${cursor.ch + 1}`;
+        });
+
+        // 按钮功能实现
+        document.getElementById('openInVSCode').addEventListener('click', () => {
+            const filePath = document.getElementById('fileLocation').textContent;
+            if (filePath !== '未选择文件') {
+                // 这里需要后端支持打开VS Code
+                fetch('/open-in-vscode', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ path: filePath })
+                });
+            } else {
+                alert('请先选择文件');
+            }
+        });
+
+        document.getElementById('saveFile').addEventListener('click', () => {
+            const filePath = document.getElementById('fileLocation').textContent;
+            const code = editor.getValue();
+            if (filePath !== '未选择文件') {
+                fetch('/save-code', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ path: filePath, content: code })
+                }).then(response => response.json())
+                  .then(data => {
+                      if (data.success) {
+                          alert('保存成功');
+                      } else {
+                          alert('保存失败: ' + data.error);
+                      }
+                  });
+            } else {
+                alert('请先选择文件');
+            }
+        });
+
+        document.getElementById('undoBtn').addEventListener('click', () => {
+            editor.undo();
+        });
+
+        document.getElementById('redoBtn').addEventListener('click', () => {
+            editor.redo();
+        });
+
+        // 从URL参数加载文件（示例）
+        const urlParams = new URLSearchParams(window.location.search);
+        // 从模板数据加载文件路径和内容
+        // 优先使用模板数据加载内容
+        if ('{{ data.content|tojson|safe }}' !== '""') {
+            document.getElementById('fileLocation').textContent = '{{ data.path }}';
+            editor.setValue({{ data.content|default('')|tojson|safe }});
+            editor.markClean();
+        } else if (urlParams.has('file')) {
+            const filePath = decodeURIComponent(urlParams.get('file'));
+            document.getElementById('fileLocation').textContent = filePath;
+            // 加载文件内容
+            fetch(`/load-code?path=${encodeURIComponent(filePath)}`)
+                .then(response => response.text())
+                .then(content => {
+                    editor.setValue(content);
+                    editor.markClean();
+                });
+        }
+    </script>
+</body>
+</html>

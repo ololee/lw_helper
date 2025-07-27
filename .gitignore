@@ -1,3 +1,7 @@
 __pycache__/
 .idea/
 .vscode/
+.venv/
+.vercel/
+export/
+decompile/from_sd/

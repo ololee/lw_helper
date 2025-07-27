@@ -25,11 +25,12 @@ class BuildingController:
                 map[id_parent] = [self.renderOne(buildingCfgItem)]
         
         for id_parent,building_list in map.items():
+            pic = building_list[0]["pic"]
             renderer_list.append({
                 "id":id_parent * 1000,
                 "name":building_list[0]["name"] ,
                 "children":building_list,
-                "icon":rf"buildings/{building_list[0]["pic"]}"
+                "icon":rf"buildings/{pic}"
             })
         return renderer_list
 

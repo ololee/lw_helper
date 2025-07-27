@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lua反编译工具 - 流水线处理系统</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="/static/styles.css">
     <style>
         :root {
             --primary-color: #4a6cf7;
@@ -285,7 +285,7 @@
             color: #fff;
             text-align: center;
             border-radius: 6px;
-            padding: 8px;
+            padding: 4px 8px;
             position: absolute;
             z-index: 1;
             bottom: 125%;
@@ -295,6 +295,8 @@
             transition: opacity 0.3s;
             font-size: 0.85rem;
             font-weight: normal;
+            display: inline-block;
+            white-space: normal;
         }
 
         .tooltip:hover .tooltip-text {
@@ -346,6 +348,7 @@
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
 </head>
 <body>
     <div class="container">
@@ -359,27 +362,30 @@
             <div class="button-grid">
                 <button class="function-btn btn-primary tooltip" data-action="fetchFiles">
                     <i class="fas fa-download"></i>拉取文件
-                    <span class="tooltip-text">从服务器拉取最新的Lua文件</span>
+                    <span class="tooltip-text">从安卓手机拉取最新的LWScripts</span>
                 </button>
                 <button class="function-btn btn-primary tooltip" data-action="unzipFiles">
                     <i class="fas fa-file-archive"></i>解压文件
-                    <span class="tooltip-text">解压下载的Lua文件包</span>
+                    <span class="tooltip-text">解压拉取的LWScripts</span>
                 </button>
-                <button class="function-btn btn-primary tooltip" data-action="modifyConfig">
-                    <i class="fas fa-file-edit"></i>修改配置
-                    <span class="tooltip-text">调整反编译配置参数</span>
-                </button>
+                 <div class="file-selection">
+                        <input type="file" id="fileSelector" style="display: none;" accept=".lua,.luac">
+                        <button class="function-btn btn-secondary tooltip" style="width: 100%;" onclick="document.getElementById('fileSelector').click()">
+                            <i class="fas fa-file-upload"></i>选择本地文件
+                            <span class="tooltip-text" style="width: 300px;" id="local_file_path">文件位置</span>
+                        </button>
+                    </div>
                 <button class="function-btn btn-primary tooltip" data-action="decompile">
                     <i class="fas fa-code"></i>执行反编译
                     <span class="tooltip-text">对Lua文件执行反编译操作</span>
                 </button>
-                <button class="function-btn btn-primary tooltip" data-action="optimizeCode">
-                    <i class="fas fa-wrench"></i>代码优化
-                    <span class="tooltip-text">优化反编译后的代码</span>
+                <button class="function-btn btn-primary tooltip" data-action="getCode">
+                    <i class="fas fa-wrench"></i>代码编辑
+                    <span class="tooltip-text">在新页面编辑反编译后的代码</span>
                 </button>
-                <button class="function-btn btn-primary tooltip" data-action="generateReport">
-                    <i class="fas fa-file-report"></i>生成报告
-                    <span class="tooltip-text">生成反编译结果报告</span>
+                <button class="function-btn btn-primary tooltip" data-action="lua2luac">
+                    <i class="fas fa-file-report"></i>生成luac
+                    <span class="tooltip-text">生成luac</span>
                 </button>
                 <button class="function-btn btn-primary tooltip" data-action="validate">
                     <i class="fas fa-check-circle"></i>代码验证
@@ -435,7 +441,7 @@
 
                 <div class="task-item" data-task-id="3">
                     <div class="task-header">
-                        <div class="task-title"><i class="fas fa-file-edit"></i>修改配置</div>
+                        <div class="task-title"><i class="fas fa-file-edit"></i>选择修改的文件</div>
                         <div class="task-status status-pending">待处理</div>
                     </div>
                     <div class="progress-container">
@@ -465,7 +471,7 @@
 
                 <div class="task-item" data-task-id="5">
                     <div class="task-header">
-                        <div class="task-title"><i class="fas fa-wrench"></i>代码优化</div>
+                        <div class="task-title"><i class="fas fa-wrench"></i>代码编辑</div>
                         <div class="task-status status-pending">待处理</div>
                     </div>
                     <div class="progress-container">
@@ -495,7 +501,7 @@
 
                 <div class="task-item" data-task-id="7">
                     <div class="task-header">
-                        <div class="task-title"><i class="fas fa-file-report"></i>生成报告</div>
+                        <div class="task-title"><i class="fas fa-file-report"></i>生成luac</div>
                         <div class="task-status status-pending">待处理</div>
                     </div>
                     <div class="progress-container">
@@ -563,30 +569,181 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // 任务状态和进度管理
+         // 任务状态和进度管理
             const taskStates = {
                 currentTask: null,
                 isProcessing: false,
                 tasks: {
-                    1: { status: 'pending', progress: 0, action: 'fetchFiles' },
-                    2: { status: 'pending', progress: 0, action: 'unzipFiles' },
-                    3: { status: 'pending', progress: 0, action: 'modifyConfig' },
-                    4: { status: 'pending', progress: 0, action: 'decompile' },
-                    5: { status: 'pending', progress: 0, action: 'optimizeCode' },
-                    6: { status: 'pending', progress: 0, action: 'validate' },
-                    7: { status: 'pending', progress: 0, action: 'generateReport' },
-                    8: { status: 'pending', progress: 0, action: 'packFiles' },
-                    9: { status: 'pending', progress: 0, action: 'uploadResult' },
-                    10: { status: 'pending', progress: 0, action: 'cleanup' }
+                    1:  {
+                            status: 'pending',
+                            progress: 0,
+                            action: 'fetchFiles'
+                        },
+                    2:  {
+                            status: 'pending',
+                            progress: 0,
+                            action: 'unzipFiles'
+                        },
+                    3:  {
+                            status: 'pending',
+                            progress: 0,
+                            action: 'modifyConfig'
+                         },
+                    4:  {
+                            status: 'pending',
+                            progress: 0,
+                            action: 'decompile'
+                        },
+                    5:  {
+                            status: 'pending',
+                            progress: 0,
+                            action: 'getCode'
+                        },
+                    6:  {
+                            status: 'pending',
+                            progress: 0,
+                            action: 'validate'
+                        },
+                    7:  {
+                            status: 'pending',
+                            progress: 0,
+                            action: 'lua2luac'
+                        },
+                    8:  {
+                            status: 'pending',
+                            progress: 0,
+                            action: 'packFiles'
+                        },
+                    9:  {
+                            status: 'pending',
+                            progress: 0,
+                            action: 'uploadResult'
+                         },
+                    10: {
+                            status: 'pending',
+                            progress: 0,
+                            action: 'cleanup'
+                         }
                 }
             };
 
+        const socket = io("http://localhost:5000",
+        {
+            transports: ['websocket'],
+            upgrade: false
+        });
+        socket.on("progress_update",(data) =>
+        {
+            const taskId = data.taskId;
+            const task = taskStates.tasks[taskId];
+            if(data.idx < data.count)
+            {
+                task.progress = Number(Math.ceil((data.idx * 100) /data.count));
+                task.status = "processing";
+            }
+            else
+            {
+                task.progress = 100;
+                task.status = "completed";
+                taskStates.currentTask = null;
+            }
+            updateTaskDisplay(taskId);
+        });
+
+         socket.on("connect", () =>
+         {
+            console.log("已连接");
+        });
+
+        socket.on("connect_error", (error) =>
+         {
+            console.error("连接错误:", error);
+        });
+
+        socket.on("modify",(data)=>{
+            console.log(JSON.stringify(data));
+        });
+
+        socket.on("disconnect", (reason) =>
+        {
+            console.log("断开连接:", reason);
+        });
+
+        async function copyToClipboard(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                console.log('复制成功');
+            } catch (err) {
+                console.error('复制失败:', err);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
             // DOM元素引用
             const startAllBtn = document.getElementById('startAllBtn');
             const stopBtn = document.getElementById('stopBtn');
             const resetBtn = document.getElementById('resetBtn');
             const functionButtons = document.querySelectorAll('.function-btn');
+            const localFilePath = document.getElementById("local_file_path");
+            const fileSelector =   document.getElementById('fileSelector');
+
+            fetch(`/decompile/getExportDir`, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => {
+                if (!response.ok) 
+                {
+                    throw new Error('操作失败');
+                }
+                return response.json();
+            }).then(data =>{
+                localFilePath.textContent = data.path || '请选择文件';  
+                copyToClipboard(data.path)  
+            });
+
+            fileSelector.addEventListener('change', function(e) {
+                if (e.target.files.length > 0) {
+                    const file = e.target.files[0];
+                    const fileName = file.name;
+                    const reader = new FileReader();
+
+                    reader.onload = async function(e) {
+                        const arrayBuffer = e.target.result;
+                        const uint8Array = new Uint8Array(arrayBuffer);
+                        const blob = new Blob([uint8Array], { type: file.type });
+
+                        const response = await fetch(`/decompile/uploadXLuaC/${fileName}`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': file.type // 重要：设置正确的 MIME 类型
+                        },
+                        body: blob
+                        });
+                        const data = await response.json();
+                        const taskId = data.task_id;
+                        const task = taskStates.tasks[taskId];
+                         if(data.status == "task_started")
+                        {
+
+                        }
+                        else if(data.status == "task_completed")
+                        {
+                            task.progress = 100;
+                            task.status = "completed";
+                            updateTaskDisplay(taskId);
+                            taskStates.currentTask = null;
+
+                            const nextTaskId = parseInt(taskId)+1;
+                            setTimeout(() => executeTask(nextTaskId), 1000);
+                        }
+                    };
+
+                    reader.readAsArrayBuffer(file);
+                }
+            });
 
             // 更新任务显示
             function updateTaskDisplay(taskId) {
@@ -624,7 +781,7 @@
                     case 'failed':
                         statusElement.textContent = '失败';
                         statusElement.classList.add('status-failed');
-                        statusText.textContent = '处理失败，请检查日志';
+                        statusText.textContent = task.error? task.error : '处理失败，请检查日志';
                         break;
                 }
 
@@ -633,6 +790,7 @@
                 progressText.textContent = `进度: ${task.progress}%`;
             }
 
+            globalThis.updateTaskDisplay = updateTaskDisplay;
             // 添加任务日志
             function addTaskLog(taskId, message) {
                 const logElement = document.getElementById(`log${taskId}`);
@@ -642,8 +800,11 @@
             }
 
             // 模拟执行任务
-            function executeTask(taskId) {
-                if (taskStates.isProcessing && taskStates.currentTask !== null) return;
+            function executeTask(taskId,args) {
+                if (taskStates.isProcessing && taskStates.currentTask != null) 
+                {
+                    return;
+                }
 
                 const task = taskStates.tasks[taskId];
                 task.status = 'processing';
@@ -652,59 +813,61 @@
                 updateTaskDisplay(taskId);
                 addTaskLog(taskId, `开始执行任务: ${document.querySelector(`.task-item[data-task-id="${taskId}"] .task-title`).textContent}`);
 
-                // 启用停止按钮
-                stopBtn.disabled = false;
-                // 禁用单个功能按钮
-                functionButtons.forEach(btn => btn.disabled = true);
+                let  request_body = { taskId: taskId };
 
-                // 模拟API请求
+                if(taskId == 5)
+                {
+                    if(args!= null && args.lua_path != null)
+                    {
+                        request_body["lua_path"] = args.lua_path;
+                    }
+                }
+
+
                 fetch(`/decompile/${task.action}`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({ taskId: taskId })
+                    body: JSON.stringify(request_body)
                 })
                 .then(response => {
                     if (!response.ok) throw new Error('操作失败');
                     return response.json();
                 })
                 .then(data => {
-                    // 模拟进度更新
-                    let progress = 0;
-                    const interval = setInterval(() => {
-                        if (taskStates.currentTask !== taskId) {
-                            clearInterval(interval);
-                            return;
-                        }
-
-                        progress += Math.random() * 20;
-                        if (progress > 100) progress = 100;
-                        task.progress = progress;
+                    if(data.error != null)
+                    {
+                        alert(data.error);
+                        task.status = "failed";
+                        task.progress = 0;
+                        task.error = data.error;
                         updateTaskDisplay(taskId);
-                        addTaskLog(taskId, `处理中... ${Math.round(progress)}%`);
+                        return;
+                    }
+                    if(data.task_id == taskId)
+                    {
+                        if(data.status == "task_started")
+                        {
 
-                        if (progress === 100) {
-                            clearInterval(interval);
-                            task.status = 'completed';
+                        }
+                        else if(data.status == "task_completed")
+                        {
                             task.progress = 100;
+                            task.status = "completed";
                             updateTaskDisplay(taskId);
-                            addTaskLog(taskId, '任务执行成功');
                             taskStates.currentTask = null;
 
-                            // 自动执行下一个任务
-                            const nextTaskId = parseInt(taskId) + 1;
-                            if (nextTaskId <= 10 && taskStates.isProcessing) {
-                                setTimeout(() => executeTask(nextTaskId), 1000);
-                            } else {
-                                // 所有任务完成
-                                taskStates.isProcessing = false;
-                                stopBtn.disabled = true;
-                                functionButtons.forEach(btn => btn.disabled = false);
-                                addTaskLog(taskId, '所有流程已完成!');
+                            if (taskId == 5)
+                            {
+                                window.open( `/decompile/code/${data.token}`,"_blank");
+                                return;
                             }
+
+                            const nextTaskId = parseInt(taskId)+1;
+                            setTimeout(() => executeTask(nextTaskId,data), 1000);
                         }
-                    }, 800);
+                    }
                 })
                 .catch(error => {
                     task.status = 'failed';
@@ -781,6 +944,7 @@
                         }
                     }
 
+
                     if (taskId) {
                         executeTask(taskId);
                     }
@@ -792,6 +956,8 @@
                 updateTaskDisplay(i);
             }
         });
+
+
     </script>
 </body>
 </html>
