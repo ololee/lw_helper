@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unicode转UTF-8工具</title>
     <link rel="stylesheet" href="/static/styles.css">
+    <script src="/static/js/decode_helper.js"></script>
 </head>
 <body>
     <div class="main-container">
@@ -44,18 +45,17 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-    // 初始化历史记录
-    renderHistory();
-
-    // 清空历史记录按钮事件
-    document.getElementById('clear-history')?.addEventListener('click', function() {
-        if (confirm('确定要清空所有历史记录吗？')) {
-            localStorage.removeItem('unicodeDecoderHistory');
+            // 初始化历史记录
             renderHistory();
-        }
-    });
 
-    
+            // 清空历史记录按钮事件
+            document.getElementById('clear-history')?.addEventListener('click', function() {
+                if (confirm('确定要清空所有历史记录吗？')) {
+                    localStorage.removeItem('unicodeDecoderHistory');
+                    renderHistory();
+                }
+            });
+
             const unicodeInput = document.getElementById('unicode-input');
             const utf8Output = document.getElementById('utf8-output');
             const decodeBtn = document.getElementById('decode-btn');
@@ -63,33 +63,6 @@
             const copyBtn = document.getElementById('copy-btn');
             const copyNotification = document.getElementById('copy-notification');
 
-            const decodeToStr = function(arr)
-            {
-                let decoder = new TextDecoder('utf-8');
-                str = decoder.decode(new Uint8Array(arr));
-                arr.splice(0,arr.length)
-                return str;
-            }
-
-            function processString(str,success,failed) {
-                    let i = 0;
-                    while (i < str.length) {
-                        // 检查是否为转义序列（\开头后跟三个数字）
-                        if (str[i] === '\\' && 
-                            /[0-9]/.test(str[i+1]) && 
-                            /[0-9]/.test(str[i+2]) && 
-                            /[0-9]/.test(str[i+3])) {
-                            // 条件A：处理转义序列
-                            const code = parseInt(str.slice(i+1, i+4), 10);
-                            success && success(code);
-                            i += 4; // 跳过 \ddd
-                        } else {
-                            // 条件B：处理普通字符
-                            failed && failed(str[i]);
-                            i++; // 移动到下一个字符
-                        }
-                    }
-                }
             // 保存解码结果到历史记录
             function saveToHistory(input, output) {
                 const history = JSON.parse(localStorage.getItem('unicodeDecoderHistory') || '[]');
@@ -110,50 +83,50 @@
                 renderHistory();
             }
 
-// 渲染历史记录
-function renderHistory() {
-    const historyList = document.getElementById('history-list');
-    const history = JSON.parse(localStorage.getItem('unicodeDecoderHistory') || '[]');
+            // 渲染历史记录
+            function renderHistory() {
+                const historyList = document.getElementById('history-list');
+                const history = JSON.parse(localStorage.getItem('unicodeDecoderHistory') || '[]');
+                
+                if (history.length === 0) {
+                    historyList.innerHTML = '<div class="empty-history">暂无历史记录</div>';
+                    return;
+                }
+                
+                historyList.innerHTML = '';
     
-    if (history.length === 0) {
-        historyList.innerHTML = '<div class="empty-history">暂无历史记录</div>';
-        return;
-    }
-    
-    historyList.innerHTML = '';
-    
-    history.forEach(item => {
-        const historyItem = document.createElement('div');
-        historyItem.className = 'history-item';
-        historyItem.innerHTML = `
-            <div class="history-input">${truncateText(item.input, 30)}</div>
-            <div class="history-output">${truncateText(item.output, 40)}</div>
-            <div class="history-time">${formatTime(item.timestamp)}</div>
-        `;
-        
-        // 点击历史记录项，将内容加载到输入框
-        historyItem.addEventListener('click', () => {
-            unicodeInput.value = item.input;
-            utf8Output.value = item.output;
-        });
-        
-        historyList.appendChild(historyItem);
-    });
-}
+                history.forEach(item => {
+                    const historyItem = document.createElement('div');
+                    historyItem.className = 'history-item';
+                    historyItem.innerHTML = `
+                        <div class="history-input">${truncateText(item.input, 30)}</div>
+                        <div class="history-output">${truncateText(item.output, 40)}</div>
+                        <div class="history-time">${formatTime(item.timestamp)}</div>
+                    `;
+                    
+                    // 点击历史记录项，将内容加载到输入框
+                    historyItem.addEventListener('click', () => {
+                        unicodeInput.value = item.input;
+                        utf8Output.value = item.output;
+                    });
+                    
+                    historyList.appendChild(historyItem);
+                });
+            }
 
-// 辅助函数：截断长文本
-function truncateText(text, maxLength) {
-    if (text.length <= maxLength) return text;
-    return text.substring(0, maxLength) + '...';
-}
+            // 辅助函数：截断长文本
+            function truncateText(text, maxLength) {
+                if (text.length <= maxLength) return text;
+                return text.substring(0, maxLength) + '...';
+            }
 
-// 辅助函数：格式化时间戳
-function formatTime(timestamp) {
-    const date = new Date(timestamp);
-    return `${date.getMonth() + 1}/${date.getDate()} ${date.getHours().toString().padStart(2, '0')}:${date.getMinutes().toString().padStart(2, '0')}`;
-}
+            // 辅助函数：格式化时间戳
+            function formatTime(timestamp) {
+                const date = new Date(timestamp);
+                return `${date.getMonth() + 1}/${date.getDate()} ${date.getHours().toString().padStart(2, '0')}:${date.getMinutes().toString().padStart(2, '0')}`;
+            }
 
-// 解码Unicode到UTF-8
+            // 解码Unicode到UTF-8
             decodeBtn.addEventListener('click', function() {
                 let input = unicodeInput.value;
                 if (!input)
@@ -177,10 +150,10 @@ function formatTime(timestamp) {
                     });
                     utf8Output.value = finalStr;
 
-// 保存到历史记录
-if (finalStr && finalStr !== '解码失败: ') {
-    saveToHistory(input, finalStr);
-}
+                // 保存到历史记录
+                if (finalStr && finalStr !== '解码失败: ') {
+                    saveToHistory(input, finalStr);
+                }
                 } catch (e) {
                     utf8Output.value = '解码失败: ' + e.message;
                 }

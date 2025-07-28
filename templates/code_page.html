@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/dracula.min.css">
     <link rel="stylesheet" href="/static/styles.css">
+    <script src="/static/js/decode_helper.js"></script>
     <style>
         .code-editor-container {
             display: flex;
@@ -122,6 +123,9 @@
                         <i class="fas fa-redo"></i> 重做
                     </button>
                 </div>
+                <button class="toolbar-btn" id="castStrs">
+                    <i class="fas fa-save"></i> 字符转换
+                </button>
             </div>
         </div>
         <div class="editor-content">
@@ -173,6 +177,11 @@
             } else {
                 alert('请先选择文件');
             }
+        });
+
+        document.getElementById('castStrs').addEventListener('click', () => {
+            let oldContent = editor.getValue();
+            editor.setValue(toNormalStr(oldContent));
         });
 
         document.getElementById('saveFile').addEventListener('click', () => {
