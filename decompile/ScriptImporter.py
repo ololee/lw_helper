@@ -31,7 +31,7 @@ def write_binary_string(buffer_array, string):
     buffer_array.append(encoded_string)
 
 
-def create_binary_file(input_dir, input_binary_file, output_binary_file):
+def create_binary_file(input_dir, input_binary_file, output_binary_file,progress_callback):
     with open(input_binary_file, 'rb') as file:
         data_buffer = file.read()
 
@@ -49,6 +49,7 @@ def create_binary_file(input_dir, input_binary_file, output_binary_file):
     buffer_array.append(file_count_buffer)
 
     count = 0
+    total = len(file_list)
     for file_path in file_list:
         file_name = os.path.relpath(file_path, input_dir)
         file_name = file_name.replace(os.sep, '/')
@@ -63,8 +64,11 @@ def create_binary_file(input_dir, input_binary_file, output_binary_file):
 
         buffer_array.append(file_content)
 
-        print(f"{count} pushed.")
+        if count % 50 == 0:
+            progress_callback(count,file_path,total)
         count += 1
+    
+    progress_callback(total,"",total)
 
     final_buffer = b''.join(buffer_array)
 
@@ -89,6 +93,6 @@ def create_crc_size_file(output_binary_file, output_crc_file):
 
 
 
-def compressFiles(input_directory,input_binary_file,output_binary_file,output_crc_file):
-    create_binary_file(input_directory, input_binary_file, output_binary_file)
+def compressFiles(input_directory,input_binary_file,output_binary_file,output_crc_file,progress_callback):
+    create_binary_file(input_directory, input_binary_file, output_binary_file,progress_callback)
     create_crc_size_file(output_binary_file, output_crc_file)

@@ -81,7 +81,7 @@ class Decompiler:
         self.versions = self.read_versions()
         self.versions.append(self.lw_version)
         self.write_versions(self.versions)
-        save_to_cache("Last_Pulled_LW_BIN_PATH",os,path.join(local_ver_dir,"LWScripts.data"))
+        save_to_cache("Last_Pulled_LW_BIN_PATH",os.path.join(local_ver_dir,"lwScripts","LWScripts.data"))
         return {
             "success": True,
             "msg": "成功",
@@ -314,27 +314,20 @@ class Decompiler:
         crcFile = os.path.join(folder,"LWScripts.txt")
         return binFile,crcFile
 
-    def packFiles(self):
+    def packFiles(self,progress_callback):
         try:
             self.check_file_valied("导出的文件夹",self.export_out_dir)
             bin_file = get_from_cache("Last_Pulled_LW_BIN_PATH")
+            print("bin_file:"+bin_file)
             self.check_file_valied("LWScripts.data",bin_file)
             self.get_version()
             self.out_put_pack_folder = os.path.join(self.from_sd_dir,self.lw_version,"pack")
             save_to_cache("MODIFIED_LW_FOLDER",self.out_put_pack_folder)
             out_bin,out_crc = self.getModifiedPackFiles(self.out_put_pack_folder)
-            compressFiles(self.out_put_pack_folder,bin_file,out_bin,out_crc)
+            compressFiles(self.export_out_dir,bin_file,out_bin,out_crc,progress_callback)
         except Exception as e:
-            return {
-                "status": "task_failed",
-                "message": str(e),
-                "task_id": 8
-            }
-        return {
-            "status": "task_completed",
-            "message": "Pack files successfully",
-            "task_id": 8
-        }
+            print(str(e))
+     
 
     def uploadResult(self):
         try:
@@ -354,20 +347,10 @@ class Decompiler:
                 }
             cmd = rf"{self.adb_path} push {input_bin} /sdcard/Android/data/com.fun.lastwar.gp/files/lwScripts/"
             result,err,_ = CMD_utils.execute_cmd(cmd)
-            if err != None or err != "":
-                return {
-                    "status": "task_failed",
-                    "error": "adb push bin失败",
-                    "task_id": task_id
-                }
+            print(err)
             cmd = rf"{self.adb_path} push {input_crc} /sdcard/Android/data/com.fun.lastwar.gp/files/lwScripts/"
             result,err,_ = CMD_utils.execute_cmd(cmd)
-            if err != None or err != "":
-                return {
-                    "status": "task_failed",
-                    "error": "adb push crc失败",
-                    "task_id": task_id
-                }
+            print(err)
         except Exception as e:
             return {
                 "status": "task_failed",
@@ -376,7 +359,7 @@ class Decompiler:
                 "error":"上传失败"
             }
         return {
-            "status": "task_success",
+            "status": "task_completed",
             "message": "上传成功",
             "task_id": 9
         }

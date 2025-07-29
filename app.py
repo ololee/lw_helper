@@ -368,17 +368,39 @@ def getAllChapter():
     output.seek(0)
     return output, 200, {'Content-Type': 'application/csv','Content-Disposition': 'attachment; filename=data.csv'}
 
+def pack_progress_callback(idx,name,count):
+    global socketio
+    if idx < count:
+        if idx % 100 == 0:
+            socketio.emit("progress_update", {
+                "taskId":8,
+                "idx": idx,
+                "name": name,
+                "count": count
+            })
+            socketio.sleep(0)
+    else:
+        socketio.emit("progress_update", {
+            "taskId":8,
+            "idx": idx,
+            "name": name,
+            "count": count
+        })
+        socketio.sleep(0)
+
+def packTask():
+    decompiler = Decompiler()
+    decompiler.packFiles(pack_progress_callback)
 
 @ignore_route
 @app.route("/decompile/packFiles",methods=["POST"])
 def packFiles():
-    decompiler = Decompiler()
-    result = decompiler.packFiles()
-    return json.dumps(result,ensure_ascii=False,indent=4), 200, {'Content-Type': 'application/json'}
+    socketio.start_background_task(packTask)
+    return  json.dumps({
+        "task_id": 8,
+        "status": "task_started"
+    },ensure_ascii=False,indent=4), 200, {'Content-Type': 'application/json'}
 
-
-def test():
-    pass
 
 @ignore_route
 @app.route("/decompile/uploadResult",methods=["POST"])
