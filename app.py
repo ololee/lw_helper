@@ -377,6 +377,9 @@ def packFiles():
     return json.dumps(result,ensure_ascii=False,indent=4), 200, {'Content-Type': 'application/json'}
 
 
+def test():
+    pass
+
 @ignore_route
 @app.route("/decompile/uploadResult",methods=["POST"])
 def uploadResult():
