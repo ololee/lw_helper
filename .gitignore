@@ -5,3 +5,4 @@ __pycache__/
 .vercel/
 decompile/export/
 decompile/from_sd/
+export/
