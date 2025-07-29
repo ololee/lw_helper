@@ -347,8 +347,8 @@
             }
         }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <link rel="stylesheet" href="/static/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="/static/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
 </head>
 <body>
     <div class="container">
@@ -368,13 +368,10 @@
                     <i class="fas fa-file-archive"></i>解压文件
                     <span class="tooltip-text">解压拉取的LWScripts</span>
                 </button>
-                 <div class="file-selection">
-                        <input type="file" id="fileSelector" style="display: none;" accept=".lua,.luac">
-                        <button class="function-btn btn-secondary tooltip" style="width: 100%;" onclick="document.getElementById('fileSelector').click()">
+                <button class="function-btn btn-secondary tooltip" style="width: 100%;" onclick="openFileSelector()">
                             <i class="fas fa-file-upload"></i>选择本地文件
                             <span class="tooltip-text" style="width: 300px;" id="local_file_path">文件位置</span>
-                        </button>
-                    </div>
+                </button>
                 <button class="function-btn btn-primary tooltip" data-action="decompile">
                     <i class="fas fa-code"></i>执行反编译
                     <span class="tooltip-text">对Lua文件执行反编译操作</span>
@@ -388,8 +385,8 @@
                     <span class="tooltip-text">生成luac</span>
                 </button>
                 <button class="function-btn btn-primary tooltip" data-action="validate">
-                    <i class="fas fa-check-circle"></i>代码验证
-                    <span class="tooltip-text">验证反编译代码的完整性</span>
+                    <i class="fas fa-check-circle"></i>代码替换
+                    <span class="tooltip-text">替换原有代码</span>
                 </button>
                 <button class="function-btn btn-primary tooltip" data-action="packFiles">
                     <i class="fas fa-box"></i>打包文件
@@ -486,7 +483,7 @@
 
                 <div class="task-item" data-task-id="6">
                     <div class="task-header">
-                        <div class="task-title"><i class="fas fa-check-circle"></i>代码验证</div>
+                        <div class="task-title"><i class="fas fa-check-circle"></i>生成luac</div>
                         <div class="task-status status-pending">待处理</div>
                     </div>
                     <div class="progress-container">
@@ -501,7 +498,7 @@
 
                 <div class="task-item" data-task-id="7">
                     <div class="task-header">
-                        <div class="task-title"><i class="fas fa-file-report"></i>生成luac</div>
+                        <div class="task-title"><i class="fas fa-file-report"></i>代码替换</div>
                         <div class="task-status status-pending">待处理</div>
                     </div>
                     <div class="progress-container">
@@ -602,12 +599,12 @@
                     6:  {
                             status: 'pending',
                             progress: 0,
-                            action: 'validate'
+                            action: 'lua2luac'
                         },
                     7:  {
                             status: 'pending',
                             progress: 0,
-                            action: 'lua2luac'
+                            action: 'replace_origin_file'
                         },
                     8:  {
                             status: 'pending',
@@ -669,6 +666,25 @@
             console.log("断开连接:", reason);
         });
 
+        socket.on("save_choosed_file_result",(data)=>{
+            const taskId = data.task_id;
+            const task = taskStates.tasks[taskId];
+            if(data.status == "task_started")
+            {
+
+            }
+            else if(data.status == "task_completed")
+            {
+                task.progress = 100;
+                task.status = "completed";
+                updateTaskDisplay(taskId);
+                taskStates.currentTask = null;
+
+                const nextTaskId = parseInt(taskId)+1;
+                setTimeout(() => executeTask(nextTaskId), 1000);
+            }
+        });
+
         async function copyToClipboard(text) {
             try {
                 await navigator.clipboard.writeText(text);
@@ -685,7 +701,6 @@
             const resetBtn = document.getElementById('resetBtn');
             const functionButtons = document.querySelectorAll('.function-btn');
             const localFilePath = document.getElementById("local_file_path");
-            const fileSelector =   document.getElementById('fileSelector');
 
             fetch(`/decompile/getExportDir`, {
                 method: 'GET',
@@ -704,46 +719,9 @@
                 copyToClipboard(data.path)  
             });
 
-            fileSelector.addEventListener('change', function(e) {
-                if (e.target.files.length > 0) {
-                    const file = e.target.files[0];
-                    const fileName = file.name;
-                    const reader = new FileReader();
-
-                    reader.onload = async function(e) {
-                        const arrayBuffer = e.target.result;
-                        const uint8Array = new Uint8Array(arrayBuffer);
-                        const blob = new Blob([uint8Array], { type: file.type });
-
-                        const response = await fetch(`/decompile/uploadXLuaC/${fileName}`, {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': file.type // 重要：设置正确的 MIME 类型
-                        },
-                        body: blob
-                        });
-                        const data = await response.json();
-                        const taskId = data.task_id;
-                        const task = taskStates.tasks[taskId];
-                         if(data.status == "task_started")
-                        {
-
-                        }
-                        else if(data.status == "task_completed")
-                        {
-                            task.progress = 100;
-                            task.status = "completed";
-                            updateTaskDisplay(taskId);
-                            taskStates.currentTask = null;
-
-                            const nextTaskId = parseInt(taskId)+1;
-                            setTimeout(() => executeTask(nextTaskId), 1000);
-                        }
-                    };
-
-                    reader.readAsArrayBuffer(file);
-                }
-            });
+            globalThis.openFileSelector  = () =>{
+                window.open( `/get_file`,"_blank");
+            }
 
             // 更新任务显示
             function updateTaskDisplay(taskId) {
@@ -799,7 +777,6 @@
                 logElement.scrollTop = logElement.scrollHeight;
             }
 
-            // 模拟执行任务
             function executeTask(taskId,args) {
                 if (taskStates.isProcessing && taskStates.currentTask != null) 
                 {
@@ -836,6 +813,7 @@
                     return response.json();
                 })
                 .then(data => {
+                    console.log(data);
                     if(data.error != null)
                     {
                         alert(data.error);
@@ -879,6 +857,8 @@
                     functionButtons.forEach(btn => btn.disabled = false);
                 });
             }
+
+            globalThis.executeTask = executeTask;
 
             // 停止当前任务
             function stopCurrentTask() {

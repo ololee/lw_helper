@@ -32,6 +32,66 @@ MysqlConnector()
 executor = ThreadPoolExecutor(max_workers=4)
 
 
+def get_file_info(root_dir,path):
+    relative_path = os.path.relpath(path, root_dir).replace("\\", "/")
+    """获取文件或目录的信息"""
+    info = {
+        "root": root_dir.replace("\\", "/"),
+        'name': os.path.basename(path),
+        'path': relative_path,
+        'is_dir': os.path.isdir(path),
+        'size': os.path.getsize(path) if not os.path.isdir(path) else 0,
+        'mtime': os.path.getmtime(path)
+    }
+    return info
+
+@ignore_route
+@app.route('/file_select/list', methods=['GET'])
+def list_files():
+    root_dir = Decompiler().getExportDir()
+    """列出指定目录下的文件和文件夹"""
+    dir_path = request.args.get('path', '')
+    abs_path = os.path.join(root_dir, dir_path)
+    
+    # 安全检查：确保请求的路径在允许的根目录内
+    if not os.path.abspath(abs_path).startswith(root_dir):
+        return jsonify({'error': 'Access denied'}), 403
+    
+    if not os.path.exists(abs_path) or not os.path.isdir(abs_path):
+        return jsonify({'error': 'Directory not found'}), 404
+    
+    try:
+        items = []
+        for item in os.listdir(abs_path):
+            item_path = os.path.join(abs_path, item)
+            items.append(get_file_info(root_dir,item_path))
+
+        # if dir_path == None or dir_path == '':
+        #     for item in os.list
+        
+        # 按名称排序，文件夹优先
+        items.sort(key=lambda x: (not x['is_dir'], x['name'].lower()))
+        return jsonify(items)
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
+@ignore_route
+@app.route("/save_choosed_file",methods=['POST'])
+def save_choosed_file():
+    data = request.get_json()
+    file_path = data['file_path']
+    decompiler = Decompiler()
+    result = decompiler.save_file(file_path)
+    if result["error"] == None or result["error"] == "":
+        socketio.emit('save_choosed_file_result', result)
+    return json.dumps(result), 200, {'Content-Type': 'application/json'}
+
+@ignore_route
+@app.route('/get_file')
+def get_file():
+    return render_template('file_browser.html')
+
 @ignore_route
 @app.route("/app_home")
 def getHomePageData():
@@ -217,17 +277,6 @@ def unzipFiles():
     },ensure_ascii=False,indent=4), 200, {'Content-Type': 'application/json'}
 
 @ignore_route
-@app.route("/decompile/uploadXLuaC/<name>",methods=["POST"])
-def uploadXLuaC(name):
-    xluac = request.get_data()
-    decompiler = Decompiler()
-    decompiler.castXLuac2Lua(name,xluac)
-    return json.dumps({
-        "task_id": 3,
-        "status": "task_completed"
-    },ensure_ascii=False,indent=4),200, {'Content-Type': 'application/json'}
-
-@ignore_route
 @app.route("/decompile/getExportDir")
 def getExportDir():
     decompiler = Decompiler()
@@ -299,10 +348,15 @@ def load_code():
 @app.route("/decompile/lua2luac",methods=["POST"])
 def lua2luac():
     decompiler = Decompiler()
-    decompiler.generate_luac()
-    return json.dumps({},ensure_ascii=False,indent=4), 200, {'Content-Type': 'application/json'}
+    result = decompiler.generate_luac()
+    return json.dumps(result,ensure_ascii=False,indent=4), 200, {'Content-Type': 'application/json'}
 
-
+@ignore_route
+@app.route("/decompile/replace_origin_file",methods=["POST"])
+def replace_origin_file():
+    decompiler = Decompiler()
+    result = decompiler.replace_origin_file()
+    return json.dumps(result,ensure_ascii=False,indent=4), 200, {'Content-Type': 'application/json'}
 
 @app.route("/quest/chapter")
 def getAllChapter():
@@ -313,6 +367,22 @@ def getAllChapter():
     df.to_csv(output, index=True)
     output.seek(0)
     return output, 200, {'Content-Type': 'application/csv','Content-Disposition': 'attachment; filename=data.csv'}
+
+
+@ignore_route
+@app.route("/decompile/packFiles",methods=["POST"])
+def packFiles():
+    decompiler = Decompiler()
+    result = decompiler.packFiles()
+    return json.dumps(result,ensure_ascii=False,indent=4), 200, {'Content-Type': 'application/json'}
+
+
+@ignore_route
+@app.route("/decompile/uploadResult",methods=["POST"])
+def uploadResult():
+    decompiler = Decompiler()
+    result = decompiler.uploadResult()
+    return json.dumps(result,ensure_ascii=False,indent=4), 200, {'Content-Type': 'application/json'}
 
 if __name__ == '__main__':
     init_db()

@@ -19,7 +19,7 @@ def read7BitEncodedInt(data_buffer, offset):
         "content_length": result
     }
 
-def extractFiles(script_file,callback):
+def extractFiles(export_root,script_file,callback):
     with open(script_file, 'rb') as f:
         data_buffer = f.read()
 
@@ -48,7 +48,7 @@ def extractFiles(script_file,callback):
         content = data_buffer[offset:offset+content_length]
         offset += content_length
 
-        save_file_name = os.path.join("export", name)
+        save_file_name = os.path.join(export_root, name)
         directory = os.path.dirname(save_file_name)
         os.makedirs(directory, exist_ok=True)
         with open(save_file_name, 'wb') as out_file:

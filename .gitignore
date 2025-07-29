@@ -3,5 +3,5 @@ __pycache__/
 .vscode/
 .venv/
 .vercel/
-export/
+decompile/export/
 decompile/from_sd/
